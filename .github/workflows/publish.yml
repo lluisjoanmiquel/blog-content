@@ -1,0 +1,25 @@
+# Dispara un nou desplegament del web de S-IE cada cop que es publica o
+# s'edita un article en aquest repositori de contingut.
+#
+# Requisit: crear un "Deploy Hook" a Vercel (al projecte del web) i desar
+# la seva URL com a secret d'aquest repositori amb el nom VERCEL_DEPLOY_HOOK.
+# (Settings → Secrets and variables → Actions → New repository secret)
+
+name: Publicar al web
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cridar el Deploy Hook de Vercel
+        run: |
+          if [ -z "${{ secrets.VERCEL_DEPLOY_HOOK }}" ]; then
+            echo "Falta el secret VERCEL_DEPLOY_HOOK. Configura'l a Settings → Secrets."
+            exit 1
+          fi
+          curl -sS -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
+          echo "Desplegament del web sol·licitat."
