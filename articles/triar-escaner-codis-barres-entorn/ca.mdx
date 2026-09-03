@@ -1,0 +1,99 @@
+---
+title: "Com triar l’escàner de codis de barres adequat per a cada entorn"
+description: "Guia pràctica per triar un escàner de codis de barres segons el tipus de codi, la distància de lectura, l’entorn i la connectivitat."
+category: guies
+slug: triar-escaner-codis-barres-entorn
+date: 2026-09-03
+author: Equip S-IE
+cover: portada-seleccio-escaner.jpg
+draft: false
+---
+
+Triar un **escàner de codis de barres** només pel preu o per la distància màxima anunciada sol conduir a errors. El model correcte és el que llegeix els codis reals, al ritme de treball necessari i en les condicions de l’entorn, sense carregar l’operari amb un equip excessiu.
+
+A **S-IE** partim de l’aplicació: analitzem les etiquetes, la distància, la mobilitat, els riscos físics i la integració. Així podem recomanar una solució ajustada, des d’un lector d’ús general fins a un escàner industrial, DPM o de visió fixa.
+
+![Operari utilitzant un escàner industrial de codis de barres en un magatzem](/blog-media/triar-escaner-codis-barres-entorn/portada-seleccio-escaner.jpg)
+
+## Els set criteris que determinen l’elecció
+
+### 1. Quins codis s’han de llegir?
+
+Cal identificar les simbologies i provar mostres reals. Un lector 1D pot ser suficient per a EAN, Code 128 o GS1-128, però un **escàner 2D** aporta compatibilitat amb DataMatrix, QR, PDF417 i, segons el model, codis mostrats en pantalles.
+
+Els codis petits, densos, mal impresos, sota plàstic o amb poc contrast poden exigir una òptica específica. Les marques directes sobre una peça —gravades, puntejades o marcades amb làser— requereixen un lector **DPM**; no s’ha de donar per fet que qualsevol imager 2D les podrà capturar. La [guia GS1 DataMatrix](https://www.gs1.org/standards/gs1-datamatrix-guideline/25) explica l’estructura i els principals criteris d’aquest símbol.
+
+### 2. A quina distància i amb quina mida de codi?
+
+La distància no depèn només de l’escàner: també hi influeixen la mida de les barres o mòduls, la qualitat d’impressió, el contrast i la il·luminació. Per a una taula o un taulell, l’abast estàndard és habitualment suficient. Per llegir ubicacions altes des del terra o etiquetes de palet des d’un carretó, cal una òptica de **llarg o ampli abast**.
+
+### 3. Quin nivell de resistència necessita?
+
+En una oficina o botiga, pes i ergonomia solen ser prioritaris. En un magatzem o una planta de producció cal revisar:
+
+- alçada i nombre de caigudes suportades;
+- resistència a tombarelles repetides;
+- grau IP contra pols i aigua;
+- temperatura de funcionament;
+- comportament amb humitat i condensació;
+- resistència del bressol, el cable i els contactes de càrrega.
+
+La fitxa oficial de la [sèrie industrial DS3600](https://www.zebra.com/gb/en/products/scanners/ultra-rugged-scanners/ds3600-series.html) mostra per què cal mirar la variant concreta: dins una mateixa família hi ha òptiques per a abast estàndard, llarg abast, alta densitat i DPM. Les prestacions de resistència també s’han de validar sempre a la fitxa del model seleccionat.
+
+### 4. Amb cable o sense fil?
+
+Un escàner amb cable és adequat per a un lloc fix i simplifica l’alimentació. Bluetooth dona llibertat per treballar al voltant d’un palet, una màquina o un vehicle, però obliga a comprovar autonomia, cobertura, temps de càrrega i disponibilitat de bateries o bressols.
+
+### 5. Com confirmarà l’operari la lectura?
+
+En un ambient sorollós, el senyal acústic pot no ser suficient: són útils la vibració o una confirmació lluminosa ben visible. També cal valorar l’ús amb guants, el pes, l’equilibri, la força del gallet i el nombre de lectures per torn.
+
+### 6. Com s’integrarà amb el sistema?
+
+Abans de comprar, cal validar la connexió USB, sèrie, Bluetooth o industrial necessària i comprovar què espera rebre l’ERP, el SGA o l’aplicació. Prefixos, sufixos, identificadors GS1, tabulacions i regles de format poden determinar si la implantació funciona sense desenvolupaments addicionals.
+
+### 7. Quin és el cost total?
+
+El cost real inclou escàner, base, cables, bateries, accessoris, configuració, possibles recanvis i temps d’aturada. En una zona exigent, un model generalista aparentment econòmic pot resultar més car si falla sovint; en una oficina, sobredimensionar la robustesa tampoc aporta retorn.
+
+## Quin tipus d’escàner convé a cada ambient?
+
+| Ambient | Prioritats | Tipus de solució habitual |
+| --- | --- | --- |
+| Oficina o mostrador | Ergonomia, USB, lectura 1D/2D | Escàner de mà d’ús general |
+| Comerç i caixa | Lectura ràpida, mans lliures, codis en pantalla | Imager 2D amb suport o presentació |
+| Magatzem | Caigudes, mobilitat, bateria, codis deteriorats | Escàner robust sense fil |
+| Prestatgeries altes o carretó | Lectura de prop i de lluny | Escàner d’abast ampli o estès |
+| Producció industrial | Pols, aigua, cops, guants i soroll | Escàner ultraresistent amb vibració |
+| Peces marcades directament | Reflexos, baix contrast, gravat o puntejat | Escàner DPM amb il·luminació específica |
+| Línia automàtica | Velocitat, camp de visió, entrades i comunicacions | Escàner fix o de visió industrial |
+| Cambra freda o exterior | Temperatura, condensació i segellat | Model certificat per a aquestes condicions |
+
+La taula és un punt de partida, no una substitució de la prova. Dos magatzems poden necessitar òptiques diferents si canvien l’amplada del codi, l’alçada de les ubicacions o la qualitat de l’etiqueta.
+
+## La prova pilot és el criteri definitiu
+
+Abans d’estandarditzar un model, convé provar-lo durant un torn complet amb:
+
+- els codis millors i pitjors de l’operació;
+- les distàncies i els angles reals;
+- els guants, la il·luminació i el soroll habituals;
+- l’aplicació i les comunicacions definitives;
+- el volum de lectures previst;
+- una simulació de canvi de bateria o de torn.
+
+S-IE pot convertir aquestes condicions en una matriu de selecció, fer proves amb mostres i preparar la configuració. Pots explorar les famílies d’[escàners de codis de barres a S-IE Market](https://s-iemarket.com/product-category/dispositivos-de-captura-de-datos/escaneres/) i els [escàners industrials de visió](https://s-iemarket.com/product-category/dispositivos-de-captura-de-datos/escaneres-de-vision/), o [contactar amb S-IE](/contacte) per validar l’aplicació abans de decidir.
+
+## Preguntes freqüents
+
+### És millor comprar sempre un escàner 2D?
+
+Ofereix més flexibilitat i pot llegir codis 1D i 2D, però la decisió també depèn de la distància, la densitat, l’estat dels codis i l’entorn. “2D” no garanteix per si sol lectura DPM ni llarg abast.
+
+### Quin grau IP necessita un escàner industrial?
+
+No hi ha una xifra universal. Cal relacionar el grau IP del model concret amb la presència real de pols, esquitxades, rentats o immersió, i revisar també caigudes, temperatura i resistència química.
+
+### Com sé si un escàner llegirà els meus codis?
+
+La forma més segura és provar mostres representatives —incloses les pitjors— a la distància, l’angle i la velocitat de treball reals.
