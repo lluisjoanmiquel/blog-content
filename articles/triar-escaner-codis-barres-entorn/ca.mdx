@@ -21,7 +21,7 @@ A **S-IE** partim de l’aplicació: analitzem les etiquetes, la distància, la 
 
 Cal identificar les simbologies i provar mostres reals. Un lector 1D pot ser suficient per a EAN, Code 128 o GS1-128, però un **escàner 2D** aporta compatibilitat amb DataMatrix, QR, PDF417 i, segons el model, codis mostrats en pantalles.
 
-Els codis petits, densos, mal impresos, sota plàstic o amb poc contrast poden exigir una òptica específica. Les marques directes sobre una peça —gravades, puntejades o marcades amb làser— requereixen un lector **DPM**; no s’ha de donar per fet que qualsevol imager 2D les podrà capturar. La [guia GS1 DataMatrix](https://www.gs1.org/standards/gs1-datamatrix-guideline/25) explica l’estructura i els principals criteris d’aquest símbol.
+Els codis petits, densos, mal impresos, sota plàstic o amb poc contrast poden exigir una òptica específica. Les marques directes sobre una peça —gravades, puntejades o marcades amb làser— requereixen un lector **DPM**; no s’ha de donar per fet que qualsevol imager 2D les podrà capturar. En aplicacions GS1 DataMatrix també cal validar l’estructura de les dades, la mida del símbol i la qualitat del marcatge.
 
 ### 2. A quina distància i amb quina mida de codi?
 
@@ -38,7 +38,7 @@ En una oficina o botiga, pes i ergonomia solen ser prioritaris. En un magatzem o
 - comportament amb humitat i condensació;
 - resistència del bressol, el cable i els contactes de càrrega.
 
-La fitxa oficial de la [sèrie industrial DS3600](https://www.zebra.com/gb/en/products/scanners/ultra-rugged-scanners/ds3600-series.html) mostra per què cal mirar la variant concreta: dins una mateixa família hi ha òptiques per a abast estàndard, llarg abast, alta densitat i DPM. Les prestacions de resistència també s’han de validar sempre a la fitxa del model seleccionat.
+Dins una mateixa família industrial hi pot haver òptiques per a abast estàndard, llarg abast, alta densitat i DPM. Per això cal revisar la variant concreta i validar sempre les prestacions de lectura i resistència a la fitxa del model seleccionat.
 
 ### 4. Amb cable o sense fil?
 
@@ -70,6 +70,10 @@ El cost real inclou escàner, base, cables, bateries, accessoris, configuració,
 | Cambra freda o exterior | Temperatura, condensació i segellat | Model certificat per a aquestes condicions |
 
 La taula és un punt de partida, no una substitució de la prova. Dos magatzems poden necessitar òptiques diferents si canvien l’amplada del codi, l’alçada de les ubicacions o la qualitat de l’etiqueta.
+
+## Descarrega la guia visual
+
+Hem preparat una matriu resumida, en català i castellà, per comparar els tipus d’escàner i preparar la prova pilot. Pots [obrir o descarregar la guia visual de selecció d’escàners](/blog-media/triar-escaner-codis-barres-entorn/guia-visual-seleccio-escaners.pdf).
 
 ## La prova pilot és el criteri definitiu
 

@@ -21,7 +21,7 @@ En **S-IE** partimos de la aplicación: analizamos las etiquetas, la distancia, 
 
 Hay que identificar las simbologías y probar muestras reales. Un lector 1D puede ser suficiente para EAN, Code 128 o GS1-128, pero un **escáner 2D** añade compatibilidad con DataMatrix, QR, PDF417 y, según el modelo, códigos mostrados en pantallas.
 
-Los códigos pequeños, densos, mal impresos, bajo plástico o con poco contraste pueden exigir una óptica específica. Las marcas directas sobre una pieza —grabadas, punteadas o marcadas con láser— requieren un lector **DPM**; no debe suponerse que cualquier imager 2D podrá capturarlas. La [guía GS1 DataMatrix](https://www.gs1.org/standards/gs1-datamatrix-guideline/25) explica la estructura y los principales criterios de este símbolo.
+Los códigos pequeños, densos, mal impresos, bajo plástico o con poco contraste pueden exigir una óptica específica. Las marcas directas sobre una pieza —grabadas, punteadas o marcadas con láser— requieren un lector **DPM**; no debe suponerse que cualquier imager 2D podrá capturarlas. En aplicaciones GS1 DataMatrix también hay que validar la estructura de los datos, el tamaño del símbolo y la calidad del marcado.
 
 ### 2. ¿A qué distancia y con qué tamaño de código?
 
@@ -38,7 +38,7 @@ En una oficina o tienda, el peso y la ergonomía suelen ser prioritarios. En un 
 - comportamiento con humedad y condensación;
 - resistencia de la base, el cable y los contactos de carga.
 
-La ficha oficial de la [serie industrial DS3600](https://www.zebra.com/gb/en/products/scanners/ultra-rugged-scanners/ds3600-series.html) muestra por qué hay que mirar la variante concreta: una misma familia ofrece ópticas para alcance estándar, largo alcance, alta densidad y DPM. Las prestaciones de resistencia también deben validarse siempre en la ficha del modelo elegido.
+Dentro de una misma familia industrial puede haber ópticas para alcance estándar, largo alcance, alta densidad y DPM. Por eso hay que revisar la variante concreta y validar siempre las prestaciones de lectura y resistencia en la ficha del modelo elegido.
 
 ### 4. ¿Con cable o inalámbrico?
 
@@ -70,6 +70,10 @@ El coste real incluye escáner, base, cables, baterías, accesorios, configuraci
 | Cámara fría o exterior | Temperatura, condensación y sellado | Modelo certificado para esas condiciones |
 
 La tabla es un punto de partida, no sustituye a la prueba. Dos almacenes pueden necesitar ópticas distintas si cambian el ancho del código, la altura de las ubicaciones o la calidad de la etiqueta.
+
+## Descarga la guía visual
+
+Hemos preparado una matriz resumida, en catalán y castellano, para comparar los tipos de escáner y preparar la prueba piloto. Puedes [abrir o descargar la guía visual de selección de escáneres](/blog-media/triar-escaner-codis-barres-entorn/guia-visual-seleccio-escaners.pdf).
 
 ## La prueba piloto es el criterio definitivo
 
