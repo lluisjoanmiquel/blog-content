@@ -1,0 +1,182 @@
+---
+title: "GS1-128: què és, com funciona i quina normativa cal complir"
+description: "Guia clara i completa sobre GS1-128, identificadors d’aplicació, SSCC, etiquetes logístiques, impressió i verificació."
+category: guies
+slug: gs1-128-que-es-funcionament-normativa
+date: 2026-09-13
+author: Equip S-IE
+cover: portada-gs1-128-logistica.jpg
+draft: false
+---
+
+El **GS1-128** és un codi de barres lineal pensat per identificar productes, agrupacions i unitats logístiques i, alhora, transportar dades com el lot, la data de caducitat, el pes, la quantitat o el número de sèrie. És especialment habitual en palets, caixes, alimentació, distribució, indústria i entorns on la traçabilitat és essencial.
+
+La seva principal diferència respecte d’un EAN-13 és que no codifica una sola dada. Mitjançant els **identificadors d’aplicació GS1**, pot concatenar diversos camps dins d’un mateix símbol i indicar als sistemes què significa cadascun.
+
+> GS1-128 no és només “un codi que es pot escanejar”. És una estructura de dades normalitzada que ha de generar-se, imprimir-se i verificar-se correctament.
+
+## Què és exactament GS1-128?
+
+GS1-128 és l’aplicació de la simbologia **Code 128** dins del sistema d’estàndards GS1. Antigament també es coneixia com a EAN-128, però la denominació actual és GS1-128.
+
+Utilitza un caràcter especial, **FNC1**, immediatament després del caràcter d’inici. Aquest element permet que el lector i el software reconeguin que el símbol conté dades estructurades segons les regles GS1.
+
+No s’ha de confondre amb:
+
+- **Code 128:** la simbologia general sobre la qual es construeix GS1-128;
+- **EAN-13:** habitual en unitats de consum que passen pel punt de venda;
+- **ITF-14:** utilitzat per representar un GTIN en determinades agrupacions;
+- **GS1 DataMatrix o GS1 QR:** símbols bidimensionals amb altres capacitats i casos d’ús.
+
+GS1-128 està especialment orientat a processos logístics i de traçabilitat. No és el símbol habitual per escanejar un producte a la caixa d’un comerç minorista.
+
+## Quines funcions té?
+
+Amb un GS1-128 es poden capturar automàticament diferents dades de negoci:
+
+- identificar un article o una agrupació amb un **GTIN**;
+- identificar una unitat logística amb un **SSCC**;
+- registrar el **lot** o la partida;
+- comunicar dates de producció, consum preferent o caducitat;
+- incorporar un número de sèrie;
+- indicar pes net, quantitat o altres mesures;
+- relacionar la unitat física amb l’albarà, l’ERP, el SGA/WMS o el sistema de traçabilitat.
+
+Això permet agilitzar recepcions, preparació de comandes, expedicions i inventaris; reduir la introducció manual de dades; gestionar rotacions per data; localitzar lots i reforçar la traçabilitat entre proveïdors, transportistes i clients.
+
+## Els identificadors d’aplicació: el diccionari del codi
+
+Els **identificadors d’aplicació**, o IA, són prefixos numèrics que defineixen el significat i el format del camp següent. En la informació llegible s’escriuen entre parèntesis, però aquests parèntesis **no es codifiquen** dins de les barres.
+
+Alguns dels IA més habituals són:
+
+| IA | Dada | Format bàsic |
+| --- | --- | --- |
+| (00) | SSCC de la unitat logística | 18 dígits |
+| (01) | GTIN de l’article o agrupació | 14 dígits |
+| (10) | Lot o partida | Fins a 20 caràcters |
+| (11) | Data de producció | 6 dígits, AAMMDD |
+| (15) | Data de consum preferent | 6 dígits, AAMMDD |
+| (17) | Data de caducitat | 6 dígits, AAMMDD |
+| (21) | Número de sèrie | Fins a 20 caràcters |
+| (30) | Quantitat variable | Fins a 8 dígits |
+| (37) | Nombre d’unitats contingudes | Fins a 8 dígits |
+| (310n) | Pes net en quilograms | 6 dígits; `n` indica els decimals |
+
+No es pot triar un IA perquè “s’assembla” al que volem representar. Cada identificador té una definició, una longitud, uns caràcters admesos i unes regles d’associació establertes a les **Especificacions generals GS1**.
+
+## Camps fixos, camps variables i separadors
+
+Alguns IA tenen una longitud fixa: el sistema sap exactament on acaba la dada. D’altres, com el lot (10) o el número de sèrie (21), tenen longitud variable.
+
+Quan un camp variable no és l’últim del símbol, s’ha d’afegir el separador FNC1 perquè el lector pugui determinar on finalitza. Oblidar aquest separador és un dels errors més comuns: el codi pot arribar a llegir-se, però les dades queden mal interpretades.
+
+Una bona pràctica és situar els camps variables al final quan sigui possible. Si calen moltes dades, es poden distribuir en més d’un símbol GS1-128 dins de la mateixa etiqueta respectant les regles d’ordre i associació.
+
+## SSCC: la matrícula única del palet
+
+El **Serial Shipping Container Code (SSCC)** és una clau GS1 de 18 dígits que identifica de manera única una unitat logística, com un palet, una gàbia o una expedició preparada.
+
+El SSCC no descriu directament el contingut. Actua com una matrícula que permet consultar les dades associades al sistema informàtic. Dos palets físicament iguals han de tenir SSCC diferents si són unitats logístiques diferents.
+
+En una etiqueta logística GS1, la informació acostuma a organitzar-se en tres blocs:
+
+1. Informació lliure, com l’empresa o dades internes.
+2. Informació llegible per persones amb els títols i valors corresponents.
+3. Símbols GS1-128 per a la captura automàtica.
+
+Quan la unitat es vincula amb un avís d’expedició electrònic, el receptor pot escanejar l’SSCC i recuperar-ne el contingut sense tornar a introduir totes les dades manualment.
+
+## Quina normativa s’ha de complir?
+
+Cal distingir entre **estàndard tècnic**, requisit contractual i legislació:
+
+- Les **Especificacions generals GS1** defineixen les claus, els IA, les combinacions de dades i les regles d’ús.
+- La simbologia Code 128 està normalitzada per **ISO/IEC 15417**.
+- La qualitat d’impressió dels codis lineals es verifica segons **ISO/IEC 15416**.
+- La **GS1 Logistic Label Guideline** defineix les bones pràctiques per construir etiquetes logístiques.
+- Un client, una plataforma de distribució o un sector pot convertir aquests estàndards en un requisit comercial o contractual.
+- La legislació sectorial pot exigir determinades dades o nivells de traçabilitat, però GS1-128 no és, per si sol, una llei universal aplicable a totes les empreses.
+
+La referència vigent és la versió actual de les Especificacions generals GS1. A data de publicació d’aquest article, GS1 publica la **versió 26.0**. Com que l’estàndard evoluciona, qualsevol projecte s’ha de contrastar amb la versió aplicable i amb les exigències concretes del client o sector.
+
+## Requisits físics que no es poden ignorar
+
+Un contingut correcte pot fallar si la impressió és deficient. La mida final s’ha de definir segons la impressora, el material, la distància de lectura i el procés logístic.
+
+Cal controlar especialment:
+
+- **zona tranquil·la:** marge lliure a esquerra i dreta del símbol;
+- **dimensió X:** amplada del mòdul més estret;
+- **alçada de les barres:** suficient per permetre una lectura estable;
+- **contrast i reflectància:** barres fosques sobre un fons clar i homogeni;
+- **magnificació i amplada total:** dins dels límits de l’aplicació;
+- **orientació i ubicació:** visibles i accessibles durant la manipulació;
+- **qualitat del suport i del ribbon:** sense buits, guany de barra, arrugues o desgast.
+
+Pots ampliar aquests criteris a [Etiquetatge GS1: 7 bones pràctiques per no fallar cap lectura](/guies/etiquetatge-gs1-bones-practiques).
+
+## Llegir no és el mateix que verificar
+
+Un lector està dissenyat per obtenir dades fins i tot en condicions imperfectes. Un **verificador** mesura la qualitat del símbol amb una metodologia normalitzada i genera un grau i un informe.
+
+Per tant, una prova amb l’escàner confirma que aquell equip ha pogut llegir el codi, però no garanteix que el símbol compleixi els requisits ni que funcioni en altres magatzems, lectors o velocitats.
+
+La verificació ha d’incloure dues dimensions:
+
+1. **Qualitat física:** impressió, contrast, modulació, defectes i zones tranquil·les.
+2. **Qualitat de les dades:** IA correctes, longituds, dígits de control, separadors, dates i correspondència amb el text visible.
+
+## EditorZPL: crear i provar etiquetes ZPL al navegador
+
+[EditorZPL](https://editorzpl.com/es) és un recurs en línia per dissenyar i previsualitzar etiquetes en llenguatge ZPL, utilitzat per impressores Zebra i equips compatibles.
+
+La pàgina permet:
+
+- crear etiquetes amb un editor visual d’arrossegar i deixar anar;
+- afegir textos, imatges, línies, caixes i codis de barres;
+- importar i editar codi ZPL existent;
+- ajustar la mida i resolució a 203, 300 o 600 dpi;
+- previsualitzar el resultat sense imprimir;
+- exportar a ZPL, PNG o PDF;
+- validar i formatar codi ZPL i utilitzar conversors complementaris.
+
+Pot ser útil per preparar una maqueta, revisar coordenades, adaptar una plantilla o compartir una previsualització. Per generar un GS1-128, però, seleccionar “Code 128” no és suficient: cal configurar l’estructura GS1, els IA, el FNC1, els separadors i les dades correctes.
+
+Tampoc substitueix una prova a la impressora real ni una verificació ISO. La resolució del capçal, la calibració, la velocitat, la temperatura, l’etiqueta i el ribbon poden modificar el resultat físic. Abans de carregar dades reals o confidencials en qualsevol eina en línia, convé revisar-ne la política de privacitat i les normes internes de l’empresa.
+
+## Com podem ajudar-te des de S-IE?
+
+A [S-IE](/assessorament/normativa-gs1) podem abordar el projecte complet, des de les dades fins a la lectura:
+
+- **assessorament GS1:** definició de GTIN, SSCC, IA i estructura de l’etiqueta;
+- **disseny i software d’etiquetatge:** plantilles controlades, dades variables i [integració amb ERP, SGA/WMS o bases de dades](/software/integracions);
+- **Loftware i NiceLabel:** govern de plantilles, permisos i impressió centralitzada en entorns cloud o locals des de la nostra àrea de [software d’edició d’etiquetes](/software/edicio-etiquetes);
+- **impressores industrials:** selecció de resolució, amplada, rendiment i connectivitat dins de les nostres [solucions d’impressió](/hardware/impressio);
+- **etiquetes i ribbon:** combinació adequada per garantir contrast, adherència i durabilitat;
+- **lectors i terminals:** captura en recepció, inventari, preparació i expedició amb [hardware de captura de dades](/hardware/captura-de-dades);
+- **verificació:** mesura de la qualitat i diagnòstic dels problemes abans de produir grans tirades;
+- **servei tècnic i posada en marxa:** calibració, proves i suport en producció.
+
+També disposem d’[impressores industrials a S-IE Market](https://s-iemarket.com/product-category/impresoras/impresoras-industriales/) i de solucions específiques com el [kit verificador de codis de barres SATO NX](https://s-iemarket.com/product/kit-verificador-de-codigos-de-barras-nx-original-de-sato/).
+
+## Checklist abans de posar una etiqueta GS1-128 en producció
+
+1. Definir la unitat que s’identifica i el procés on es llegirà.
+2. Confirmar els requisits del client, sector i documentació logística.
+3. Assignar correctament GTIN, SSCC i la resta de claus GS1.
+4. Seleccionar els IA i validar el format de cada dada.
+5. Incorporar FNC1 i separadors on correspongui.
+6. Mostrar la informació llegible de manera coherent amb les dades codificades.
+7. Dimensionar el símbol per a la resolució i la distància de lectura.
+8. Imprimir amb una combinació adequada d’etiqueta i ribbon.
+9. Verificar la qualitat segons ISO/IEC 15416 i provar el flux complet.
+10. Bloquejar i versionar la plantilla validada per evitar canvis no controlats.
+
+Si necessites crear una etiqueta logística, corregir un GS1-128 rebutjat o integrar la impressió amb el teu sistema, [contacta amb S-IE](/contacte). Podem revisar dades, plantilla, consumibles, impressora, verificació i lectura com una única solució.
+
+## Fonts
+
+Informació contrastada amb les [Especificacions generals GS1, versió 26.0](https://ref.gs1.org/standards/genspecs/26.0.0/), la [GS1 Logistic Label Guideline](https://www.gs1.org/standards/gs1-logistic-label-guideline/current-standard), el directori oficial d’[identificadors d’aplicació GS1](https://ref.gs1.org/ai/) i la informació de [GS1 Spain sobre GS1-128](https://www.gs1es.org/capturar-codigo-de-barras-gs1/estandar-gs1-128/).
+
+Les especificacions i els requeriments sectorials poden canviar. Cal validar cada implantació amb la versió vigent de l’estàndard i les exigències del destinatari.

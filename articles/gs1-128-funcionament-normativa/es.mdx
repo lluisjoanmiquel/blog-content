@@ -1,0 +1,182 @@
+---
+title: "GS1-128: qué es, cómo funciona y qué normativa debe cumplir"
+description: "Guía clara y completa sobre GS1-128, identificadores de aplicación, SSCC, etiquetas logísticas, impresión y verificación."
+category: guies
+slug: gs1-128-que-es-funcionamiento-normativa
+date: 2026-09-13
+author: Equipo S-IE
+cover: portada-gs1-128-logistica.jpg
+draft: false
+---
+
+El **GS1-128** es un código de barras lineal pensado para identificar productos, agrupaciones y unidades logísticas y, al mismo tiempo, transportar datos como el lote, la fecha de caducidad, el peso, la cantidad o el número de serie. Es especialmente habitual en palés, cajas, alimentación, distribución, industria y entornos donde la trazabilidad es esencial.
+
+Su principal diferencia respecto a un EAN-13 es que no codifica un único dato. Mediante los **identificadores de aplicación GS1**, puede concatenar varios campos dentro de un mismo símbolo e indicar a los sistemas qué significa cada uno.
+
+> GS1-128 no es solo “un código que se puede escanear”. Es una estructura de datos normalizada que debe generarse, imprimirse y verificarse correctamente.
+
+## ¿Qué es exactamente GS1-128?
+
+GS1-128 es la aplicación de la simbología **Code 128** dentro del sistema de estándares GS1. Antiguamente también se conocía como EAN-128, pero la denominación actual es GS1-128.
+
+Utiliza un carácter especial, **FNC1**, inmediatamente después del carácter de inicio. Este elemento permite que el lector y el software reconozcan que el símbolo contiene datos estructurados según las reglas GS1.
+
+No debe confundirse con:
+
+- **Code 128:** la simbología general sobre la que se construye GS1-128;
+- **EAN-13:** habitual en unidades de consumo que pasan por el punto de venta;
+- **ITF-14:** utilizado para representar un GTIN en determinadas agrupaciones;
+- **GS1 DataMatrix o GS1 QR:** símbolos bidimensionales con otras capacidades y casos de uso.
+
+GS1-128 está especialmente orientado a procesos logísticos y de trazabilidad. No es el símbolo habitual para escanear un producto en la caja de un comercio minorista.
+
+## ¿Qué funciones tiene?
+
+Con un GS1-128 pueden capturarse automáticamente diferentes datos de negocio:
+
+- identificar un artículo o una agrupación con un **GTIN**;
+- identificar una unidad logística con un **SSCC**;
+- registrar el **lote** o la partida;
+- comunicar fechas de producción, consumo preferente o caducidad;
+- incorporar un número de serie;
+- indicar peso neto, cantidad u otras medidas;
+- relacionar la unidad física con el albarán, el ERP, el SGA/WMS o el sistema de trazabilidad.
+
+Esto permite agilizar recepciones, preparación de pedidos, expediciones e inventarios; reducir la introducción manual de datos; gestionar rotaciones por fecha; localizar lotes y reforzar la trazabilidad entre proveedores, transportistas y clientes.
+
+## Los identificadores de aplicación: el diccionario del código
+
+Los **identificadores de aplicación**, o IA, son prefijos numéricos que definen el significado y el formato del campo siguiente. En la información legible se escriben entre paréntesis, pero esos paréntesis **no se codifican** dentro de las barras.
+
+Algunos de los IA más habituales son:
+
+| IA | Dato | Formato básico |
+| --- | --- | --- |
+| (00) | SSCC de la unidad logística | 18 dígitos |
+| (01) | GTIN del artículo o agrupación | 14 dígitos |
+| (10) | Lote o partida | Hasta 20 caracteres |
+| (11) | Fecha de producción | 6 dígitos, AAMMDD |
+| (15) | Fecha de consumo preferente | 6 dígitos, AAMMDD |
+| (17) | Fecha de caducidad | 6 dígitos, AAMMDD |
+| (21) | Número de serie | Hasta 20 caracteres |
+| (30) | Cantidad variable | Hasta 8 dígitos |
+| (37) | Número de unidades contenidas | Hasta 8 dígitos |
+| (310n) | Peso neto en kilogramos | 6 dígitos; `n` indica los decimales |
+
+No puede escogerse un IA porque “se parece” a lo que queremos representar. Cada identificador tiene una definición, una longitud, unos caracteres permitidos y unas reglas de asociación establecidas en las **Especificaciones generales GS1**.
+
+## Campos fijos, campos variables y separadores
+
+Algunos IA tienen una longitud fija: el sistema sabe exactamente dónde termina el dato. Otros, como el lote (10) o el número de serie (21), tienen longitud variable.
+
+Cuando un campo variable no es el último del símbolo, debe añadirse el separador FNC1 para que el lector pueda determinar dónde termina. Olvidar este separador es uno de los errores más frecuentes: el código puede llegar a leerse, pero los datos quedan mal interpretados.
+
+Una buena práctica es situar los campos variables al final cuando sea posible. Si se necesitan muchos datos, pueden distribuirse en más de un símbolo GS1-128 dentro de la misma etiqueta respetando las reglas de orden y asociación.
+
+## SSCC: la matrícula única del palé
+
+El **Serial Shipping Container Code (SSCC)** es una clave GS1 de 18 dígitos que identifica de forma única una unidad logística, como un palé, una jaula o una expedición preparada.
+
+El SSCC no describe directamente el contenido. Actúa como una matrícula que permite consultar los datos asociados en el sistema informático. Dos palés físicamente iguales deben tener SSCC distintos si son unidades logísticas diferentes.
+
+En una etiqueta logística GS1, la información suele organizarse en tres bloques:
+
+1. Información libre, como la empresa o datos internos.
+2. Información legible por personas con los títulos y valores correspondientes.
+3. Símbolos GS1-128 para la captura automática.
+
+Cuando la unidad se vincula con un aviso de expedición electrónico, el receptor puede escanear el SSCC y recuperar su contenido sin volver a introducir todos los datos manualmente.
+
+## ¿Qué normativa debe cumplirse?
+
+Hay que distinguir entre **estándar técnico**, requisito contractual y legislación:
+
+- Las **Especificaciones generales GS1** definen las claves, los IA, las combinaciones de datos y las reglas de uso.
+- La simbología Code 128 está normalizada por **ISO/IEC 15417**.
+- La calidad de impresión de los códigos lineales se verifica según **ISO/IEC 15416**.
+- La **GS1 Logistic Label Guideline** define las buenas prácticas para construir etiquetas logísticas.
+- Un cliente, una plataforma de distribución o un sector puede convertir estos estándares en un requisito comercial o contractual.
+- La legislación sectorial puede exigir determinados datos o niveles de trazabilidad, pero GS1-128 no es, por sí solo, una ley universal aplicable a todas las empresas.
+
+La referencia vigente es la versión actual de las Especificaciones generales GS1. En la fecha de publicación de este artículo, GS1 publica la **versión 26.0**. Como el estándar evoluciona, cualquier proyecto debe contrastarse con la versión aplicable y con las exigencias concretas del cliente o sector.
+
+## Requisitos físicos que no pueden ignorarse
+
+Un contenido correcto puede fallar si la impresión es deficiente. El tamaño final debe definirse según la impresora, el material, la distancia de lectura y el proceso logístico.
+
+Hay que controlar especialmente:
+
+- **zona tranquila:** margen libre a izquierda y derecha del símbolo;
+- **dimensión X:** ancho del módulo más estrecho;
+- **altura de las barras:** suficiente para permitir una lectura estable;
+- **contraste y reflectancia:** barras oscuras sobre un fondo claro y homogéneo;
+- **magnificación y ancho total:** dentro de los límites de la aplicación;
+- **orientación y ubicación:** visibles y accesibles durante la manipulación;
+- **calidad del soporte y del ribbon:** sin vacíos, ganancia de barra, arrugas o desgaste.
+
+Puedes ampliar estos criterios en [Etiquetado GS1: 7 buenas prácticas para no fallar ninguna lectura](/es/guias/etiquetado-gs1-buenas-practicas).
+
+## Leer no es lo mismo que verificar
+
+Un lector está diseñado para obtener datos incluso en condiciones imperfectas. Un **verificador** mide la calidad del símbolo con una metodología normalizada y genera un grado y un informe.
+
+Por tanto, una prueba con el escáner confirma que ese equipo ha podido leer el código, pero no garantiza que el símbolo cumpla los requisitos ni que funcione en otros almacenes, lectores o velocidades.
+
+La verificación debe incluir dos dimensiones:
+
+1. **Calidad física:** impresión, contraste, modulación, defectos y zonas tranquilas.
+2. **Calidad de los datos:** IA correctos, longitudes, dígitos de control, separadores, fechas y correspondencia con el texto visible.
+
+## EditorZPL: crear y probar etiquetas ZPL en el navegador
+
+[EditorZPL](https://editorzpl.com/es) es un recurso en línea para diseñar y previsualizar etiquetas en lenguaje ZPL, utilizado por impresoras Zebra y equipos compatibles.
+
+La página permite:
+
+- crear etiquetas con un editor visual de arrastrar y soltar;
+- añadir textos, imágenes, líneas, cajas y códigos de barras;
+- importar y editar código ZPL existente;
+- ajustar el tamaño y la resolución a 203, 300 o 600 dpi;
+- previsualizar el resultado sin imprimir;
+- exportar a ZPL, PNG o PDF;
+- validar y formatear código ZPL y utilizar conversores complementarios.
+
+Puede ser útil para preparar una maqueta, revisar coordenadas, adaptar una plantilla o compartir una previsualización. Para generar un GS1-128, sin embargo, seleccionar “Code 128” no es suficiente: hay que configurar la estructura GS1, los IA, el FNC1, los separadores y los datos correctos.
+
+Tampoco sustituye una prueba en la impresora real ni una verificación ISO. La resolución del cabezal, la calibración, la velocidad, la temperatura, la etiqueta y el ribbon pueden modificar el resultado físico. Antes de cargar datos reales o confidenciales en cualquier herramienta en línea, conviene revisar su política de privacidad y las normas internas de la empresa.
+
+## ¿Cómo podemos ayudarte desde S-IE?
+
+En [S-IE](/es/asesoramiento/normativa-gs1) podemos abordar el proyecto completo, desde los datos hasta la lectura:
+
+- **asesoramiento GS1:** definición de GTIN, SSCC, IA y estructura de la etiqueta;
+- **diseño y software de etiquetado:** plantillas controladas, datos variables e [integración con ERP, SGA/WMS o bases de datos](/es/software/integraciones);
+- **Loftware y NiceLabel:** gobierno de plantillas, permisos e impresión centralizada en entornos cloud o locales desde nuestra área de [software de edición de etiquetas](/es/software/edicion-etiquetas);
+- **impresoras industriales:** selección de resolución, ancho, rendimiento y conectividad dentro de nuestras [soluciones de impresión](/es/hardware/impresion);
+- **etiquetas y ribbon:** combinación adecuada para garantizar contraste, adherencia y durabilidad;
+- **lectores y terminales:** captura en recepción, inventario, preparación y expedición con [hardware de captura de datos](/es/hardware/captura-de-datos);
+- **verificación:** medición de la calidad y diagnóstico de problemas antes de producir grandes tiradas;
+- **servicio técnico y puesta en marcha:** calibración, pruebas y soporte en producción.
+
+También disponemos de [impresoras industriales en S-IE Market](https://s-iemarket.com/product-category/impresoras/impresoras-industriales/) y de soluciones específicas como el [kit verificador de códigos de barras SATO NX](https://s-iemarket.com/product/kit-verificador-de-codigos-de-barras-nx-original-de-sato/).
+
+## Checklist antes de poner una etiqueta GS1-128 en producción
+
+1. Definir la unidad que se identifica y el proceso donde se leerá.
+2. Confirmar los requisitos del cliente, sector y documentación logística.
+3. Asignar correctamente GTIN, SSCC y el resto de claves GS1.
+4. Seleccionar los IA y validar el formato de cada dato.
+5. Incorporar FNC1 y separadores donde corresponda.
+6. Mostrar la información legible de forma coherente con los datos codificados.
+7. Dimensionar el símbolo para la resolución y la distancia de lectura.
+8. Imprimir con una combinación adecuada de etiqueta y ribbon.
+9. Verificar la calidad según ISO/IEC 15416 y probar el flujo completo.
+10. Bloquear y versionar la plantilla validada para evitar cambios no controlados.
+
+Si necesitas crear una etiqueta logística, corregir un GS1-128 rechazado o integrar la impresión con tu sistema, [contacta con S-IE](/es/contacto). Podemos revisar datos, plantilla, consumibles, impresora, verificación y lectura como una única solución.
+
+## Fuentes
+
+Información contrastada con las [Especificaciones generales GS1, versión 26.0](https://ref.gs1.org/standards/genspecs/26.0.0/), la [GS1 Logistic Label Guideline](https://www.gs1.org/standards/gs1-logistic-label-guideline/current-standard), el directorio oficial de [identificadores de aplicación GS1](https://ref.gs1.org/ai/) y la información de [GS1 Spain sobre GS1-128](https://www.gs1es.org/capturar-codigo-de-barras-gs1/estandar-gs1-128/).
+
+Las especificaciones y los requisitos sectoriales pueden cambiar. Cada implantación debe validarse con la versión vigente del estándar y las exigencias del destinatario.
