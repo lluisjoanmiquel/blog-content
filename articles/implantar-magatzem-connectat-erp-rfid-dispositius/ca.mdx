@@ -1,0 +1,258 @@
+---
+title: "Com implantar un magatzem connectat: ERP, RFID i gestió de dispositius"
+description: "Guia per connectar ERP, operativa de magatzem, RFID i dispositius mòbils amb dades fiables, desplegament progressiu i control centralitzat."
+category: guies
+slug: implantar-magatzem-connectat-erp-rfid-dispositius
+date: 2026-09-15
+author: Equip S-IE
+cover: portada.jpg
+draft: false
+---
+
+Digitalitzar un magatzem no consisteix a afegir terminals, lectors RFID o una
+aplicació nova sobre els processos existents. Per obtenir resultats, cal
+connectar quatre peces: el sistema de negoci, l’operativa física, la captura de
+dades i la gestió dels dispositius.
+
+Quan aquestes capes estan ben coordinades, cada moviment actualitza la
+informació correcta en el moment adequat. Quan no ho estan, apareixen
+duplicitats, inventaris poc fiables, incidències difícils de rastrejar i equips
+que deixen de funcionar sense que ningú en conegui la causa.
+
+Aquesta guia planteja una implantació progressiva d’un magatzem connectat, des
+de la definició dels objectius fins al desplegament i la millora contínua.
+
+## 1. Comença pel procés, no per la tecnologia
+
+Abans de triar hardware o software, cal descriure com circula realment la
+mercaderia:
+
+- recepció i verificació;
+- identificació i etiquetatge;
+- ubicació;
+- reposició;
+- preparació de comandes;
+- embalatge i expedició;
+- inventaris i regularitzacions;
+- devolucions i incidències.
+
+Per a cada pas s’ha d’identificar qui executa l’acció, quina dada necessita,
+quina dada genera i en quin sistema queda registrada. Aquest mapa permet
+distingir els problemes d’informació dels problemes purament operatius.
+
+> Una bona implantació no digitalitza moviments innecessaris: primer simplifica
+> el procés i després automatitza els punts que aporten control.
+
+## 2. Defineix una font única de veritat
+
+L’ERP sol governar les dades mestres i els documents comercials: articles,
+clients, proveïdors, comandes i albarans. El WMS o l’aplicació de magatzem
+controla l’execució: ubicacions, tasques, estoc disponible, picking i
+expedicions.
+
+Abans d’integrar-los, convé acordar:
+
+- quin sistema és responsable de cada dada;
+- quins esdeveniments s’intercanvien;
+- amb quina freqüència o latència;
+- què passa si una comunicació falla;
+- com s’eviten registres duplicats;
+- com es corregeix una dada sense perdre la traçabilitat.
+
+Les [integracions amb ERP, WMS i
+MES](/software/integracions) han de mantenir aquest repartiment de
+responsabilitats. Copiar informació entre sistemes sense definir-ne el govern
+només trasllada els errors d’un lloc a un altre.
+
+## 3. Prepara les dades mestres
+
+La captura automàtica no pot compensar unes dades d’origen incompletes. Abans
+del pilot, cal revisar com a mínim:
+
+- identificadors d’article i variants;
+- unitats de consum, caixes i palets;
+- equivalències entre unitats de mesura;
+- lots, números de sèrie i caducitats;
+- ubicacions i capacitats;
+- codis GTIN, GLN i SSCC quan siguin aplicables;
+- etiquetes i plantilles associades a cada procés.
+
+L’objectiu és que una lectura identifiqui de manera inequívoca l’article, la
+unitat logística, la ubicació o l’actiu. Els [estàndards
+GS1](/assessorament/normativa-gs1) faciliten aquesta interoperabilitat entre
+empreses i sistemes.
+
+## 4. Escull la captura adequada per a cada punt
+
+No tots els processos necessiten la mateixa tecnologia.
+
+### Codi de barres
+
+És econòmic, visible i fàcil d’implantar. Funciona molt bé quan l’operari pot
+orientar el lector cap al codi i confirmar cada unitat de manera individual.
+
+### RFID
+
+Permet llegir diversos identificadors sense contacte visual directe. Pot
+aportar valor en inventaris, control de retornables, entrades i sortides o
+processos amb moltes unitats, però necessita una anàlisi física de l’entorn.
+
+Metalls, líquids, distàncies, orientacions, interferències i densitat
+d’etiquetes poden modificar la lectura. Per això cal provar la combinació
+d’etiqueta, inlay, lector, antena, potència i posició sobre el producte real.
+
+### Terminals i wearables
+
+Els [terminals, escàners i
+wearables](/hardware/captura-de-dades) han d’encaixar amb la tasca. En recepció
+pot ser important llegir a distància; en picking, tenir les mans lliures; en
+exterior, disposar de protecció i pantalla llegible; i en torns llargs, canviar
+la bateria sense aturar l’operativa.
+
+La decisió correcta pot combinar tecnologies: codi de barres per confirmar
+detalls i RFID per detectar conjunts o moviments massius.
+
+## 5. Dissenya una arquitectura resilient
+
+El flux ideal és senzill: l’ERP envia una necessitat, l’aplicació la converteix
+en una tasca, l’operari captura el moviment i el resultat torna al sistema de
+negoci. La realitat, però, inclou pèrdues de cobertura, dispositius sense
+bateria, dades incompletes i serveis temporalment indisponibles.
+
+Per això l’arquitectura ha de preveure:
+
+- cues i reintents de comunicació;
+- identificadors únics per evitar duplicats;
+- treball offline quan el procés ho requereixi;
+- registre d’errors i esdeveniments;
+- alertes davant d’incidències repetides;
+- traçabilitat de qui ha fet cada operació;
+- recuperació controlada després d’una caiguda.
+
+Cal decidir també si la integració serà en temps real, per lots o híbrida. Una
+confirmació d’expedició pot requerir immediatesa, mentre que determinats
+informes es poden actualitzar de manera periòdica.
+
+## 6. Fes un pilot RFID acotat
+
+RFID no s’hauria de desplegar a tot el magatzem sense una prova representativa.
+Un bon pilot selecciona un procés amb un problema mesurable i un abast prou
+petit per poder ajustar-lo.
+
+El pilot hauria de validar:
+
+1. els articles i materials més exigents;
+2. la ubicació i fixació de les etiquetes;
+3. les zones i distàncies de lectura;
+4. els falsos positius i les lectures perdudes;
+5. la velocitat real del procés;
+6. la integració amb l’aplicació i l’ERP;
+7. el cost per unitat i el retorn esperat.
+
+L’èxit no és aconseguir una lectura en una demostració. És mantenir una taxa de
+lectura fiable sota les condicions normals i excepcionals de l’operativa.
+
+## 7. Gestiona els dispositius com una flota
+
+Quan hi ha més d’uns quants terminals, configurar-los un a un deixa de ser
+sostenible. Una plataforma de [monitorització de
+terminals](/software/monitoritzacio-terminals) permet aplicar configuracions,
+desplegar aplicacions, limitar funcions, actualitzar equips i obtenir informació
+del seu estat.
+
+La política de gestió hauria d’incloure:
+
+- inventari de dispositius, models i versions;
+- configuració de Wi-Fi, aplicacions i perifèrics;
+- perfils segons funció o zona;
+- actualitzacions progressives i reversibles;
+- bloqueig de funcions no necessàries;
+- xifratge, autenticació i caducitat de sessions;
+- localització o bloqueig dels equips perduts, quan correspongui;
+- estat de bateries, emmagatzematge i connectivitat;
+- procediment de substitució i equip de reserva.
+
+La gestió centralitzada redueix temps de suport, però també evita que terminals
+amb configuracions diferents generin comportaments diferents en un mateix
+procés.
+
+## 8. Prova el flux complet
+
+Les proves no s’han de limitar a comprovar que el lector captura un codi. Cal
+validar la cadena sencera, des de l’ordre generada per l’ERP fins a la
+confirmació final.
+
+Inclou casos normals i excepcions:
+
+- article o ubicació incorrectes;
+- unitat no prevista;
+- lot caducat o número de sèrie duplicat;
+- lectura RFID múltiple o inesperada;
+- pèrdua temporal de xarxa;
+- reinici o substitució d’un terminal;
+- reimpressió d’una etiqueta;
+- cancel·lació d’una tasca ja iniciada;
+- diferència d’estoc i regularització.
+
+Cada error ha de produir un missatge comprensible per a l’operari i deixar
+informació suficient perquè suport pugui diagnosticar-lo.
+
+## 9. Desplega per fases
+
+Una implantació progressiva redueix el risc i facilita l’aprenentatge. Una
+seqüència habitual és:
+
+1. procés i zona pilot;
+2. grup reduït d’usuaris;
+3. torn complet;
+4. ampliació a més zones o processos;
+5. estabilització i retirada del sistema anterior.
+
+Abans de cada fase convé definir criteris d’entrada i de sortida, formar els
+usuaris i preparar un pla de contingència. Durant un període limitat pot ser
+necessari comparar les dades del sistema nou amb l’inventari o procediment
+anterior.
+
+## 10. Mesura si la implantació funciona
+
+Els indicadors s’han de definir abans del pilot per poder comparar la situació
+inicial amb el resultat. Alguns KPI útils són:
+
+- precisió de l’inventari;
+- temps de recepció per unitat o palet;
+- línies de picking per hora;
+- percentatge d’errors de preparació;
+- temps de localització d’un actiu;
+- taxa de lectura de codis o RFID;
+- disponibilitat dels terminals;
+- incidències i temps mitjà de resolució;
+- reimpressions i consum d’etiquetes.
+
+La tecnologia té sentit quan millora aquests resultats de manera sostinguda, no
+quan només afegeix més dades o pantalles.
+
+## Checklist d’implantació
+
+- [ ] El procés actual està documentat i simplificat.
+- [ ] Cada dada té un sistema responsable.
+- [ ] Les dades mestres i els identificadors estan validats.
+- [ ] La tecnologia de captura s’ha provat amb productes reals.
+- [ ] Les excepcions i la manca de connexió estan previstes.
+- [ ] Els terminals es poden configurar i actualitzar centralment.
+- [ ] El pilot té abast, responsables i KPI definits.
+- [ ] Els usuaris han participat en les proves i la formació.
+- [ ] Hi ha un pla de suport, contingència i substitució d’equips.
+- [ ] El desplegament complet depèn dels resultats del pilot.
+
+## Una implantació de cap a cap
+
+ERP, WMS, RFID i dispositius no són projectes independents. Formen una única
+cadena de dades que comença en el moviment físic i acaba en una decisió de
+negoci.
+
+A S-IE analitzem l’operativa, definim la captura, connectem els sistemes i
+preparem els dispositius perquè la solució funcioni en el magatzem real.
+
+**Vols digitalitzar un procés de magatzem o validar un pilot RFID?**
+[Explica’ns el teu cas](/contacte) i t’ajudarem a definir un desplegament
+progressiu, mesurable i preparat per créixer.

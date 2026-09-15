@@ -1,0 +1,261 @@
+---
+title: "Cómo implantar un almacén conectado: ERP, RFID y gestión de dispositivos"
+description: "Guía para conectar ERP, operativa de almacén, RFID y dispositivos móviles con datos fiables, despliegue progresivo y control centralizado."
+category: guies
+slug: implantar-almacen-conectado-erp-rfid-dispositivos
+date: 2026-09-15
+author: Equipo S-IE
+cover: portada.jpg
+draft: false
+---
+
+Digitalizar un almacén no consiste en añadir terminales, lectores RFID o una
+aplicación nueva sobre los procesos existentes. Para obtener resultados hay que
+conectar cuatro piezas: el sistema de negocio, la operativa física, la captura
+de datos y la gestión de los dispositivos.
+
+Cuando estas capas están bien coordinadas, cada movimiento actualiza la
+información correcta en el momento adecuado. Cuando no lo están, aparecen
+duplicidades, inventarios poco fiables, incidencias difíciles de rastrear y
+equipos que dejan de funcionar sin que nadie conozca la causa.
+
+Esta guía plantea una implantación progresiva de un almacén conectado, desde la
+definición de los objetivos hasta el despliegue y la mejora continua.
+
+## 1. Empieza por el proceso, no por la tecnología
+
+Antes de elegir hardware o software hay que describir cómo circula realmente la
+mercancía:
+
+- recepción y verificación;
+- identificación y etiquetado;
+- ubicación;
+- reposición;
+- preparación de pedidos;
+- embalaje y expedición;
+- inventarios y regularizaciones;
+- devoluciones e incidencias.
+
+Para cada paso debe identificarse quién ejecuta la acción, qué dato necesita,
+qué dato genera y en qué sistema queda registrado. Este mapa permite distinguir
+los problemas de información de los problemas puramente operativos.
+
+> Una buena implantación no digitaliza movimientos innecesarios: primero
+> simplifica el proceso y después automatiza los puntos que aportan control.
+
+## 2. Define una fuente única de verdad
+
+El ERP suele gobernar los datos maestros y los documentos comerciales:
+artículos, clientes, proveedores, pedidos y albaranes. El WMS o la aplicación
+de almacén controla la ejecución: ubicaciones, tareas, stock disponible, picking
+y expediciones.
+
+Antes de integrarlos conviene acordar:
+
+- qué sistema es responsable de cada dato;
+- qué eventos se intercambian;
+- con qué frecuencia o latencia;
+- qué ocurre si una comunicación falla;
+- cómo se evitan registros duplicados;
+- cómo se corrige un dato sin perder la trazabilidad.
+
+Las [integraciones con ERP, WMS y
+MES](/es/software/integraciones) deben mantener este reparto de
+responsabilidades. Copiar información entre sistemas sin definir su gobierno
+solamente traslada los errores de un lugar a otro.
+
+## 3. Prepara los datos maestros
+
+La captura automática no puede compensar unos datos de origen incompletos.
+Antes del piloto hay que revisar como mínimo:
+
+- identificadores de artículo y variantes;
+- unidades de consumo, cajas y palés;
+- equivalencias entre unidades de medida;
+- lotes, números de serie y caducidades;
+- ubicaciones y capacidades;
+- códigos GTIN, GLN y SSCC cuando sean aplicables;
+- etiquetas y plantillas asociadas a cada proceso.
+
+El objetivo es que una lectura identifique de forma inequívoca el artículo, la
+unidad logística, la ubicación o el activo. Los [estándares
+GS1](/es/asesoramiento/normativa-gs1) facilitan esta interoperabilidad entre
+empresas y sistemas.
+
+## 4. Escoge la captura adecuada para cada punto
+
+No todos los procesos necesitan la misma tecnología.
+
+### Código de barras
+
+Es económico, visible y fácil de implantar. Funciona muy bien cuando el
+operario puede orientar el lector hacia el código y confirmar cada unidad de
+forma individual.
+
+### RFID
+
+Permite leer varios identificadores sin contacto visual directo. Puede aportar
+valor en inventarios, control de retornables, entradas y salidas o procesos con
+muchas unidades, pero necesita un análisis físico del entorno.
+
+Metales, líquidos, distancias, orientaciones, interferencias y densidad de
+etiquetas pueden modificar la lectura. Por eso hay que probar la combinación de
+etiqueta, inlay, lector, antena, potencia y posición sobre el producto real.
+
+### Terminales y wearables
+
+Los [terminales, escáneres y
+wearables](/es/hardware/captura-de-datos) deben encajar con la tarea. En
+recepción puede ser importante leer a distancia; en picking, tener las manos
+libres; en exterior, disponer de protección y pantalla legible; y en turnos
+largos, cambiar la batería sin detener la operativa.
+
+La decisión correcta puede combinar tecnologías: código de barras para
+confirmar detalles y RFID para detectar conjuntos o movimientos masivos.
+
+## 5. Diseña una arquitectura resiliente
+
+El flujo ideal es sencillo: el ERP envía una necesidad, la aplicación la
+convierte en una tarea, el operario captura el movimiento y el resultado vuelve
+al sistema de negocio. La realidad, sin embargo, incluye pérdidas de cobertura,
+dispositivos sin batería, datos incompletos y servicios temporalmente no
+disponibles.
+
+Por eso la arquitectura debe prever:
+
+- colas y reintentos de comunicación;
+- identificadores únicos para evitar duplicados;
+- trabajo offline cuando el proceso lo requiera;
+- registro de errores y eventos;
+- alertas ante incidencias repetidas;
+- trazabilidad de quién ha realizado cada operación;
+- recuperación controlada después de una caída.
+
+También hay que decidir si la integración será en tiempo real, por lotes o
+híbrida. Una confirmación de expedición puede requerir inmediatez, mientras que
+determinados informes pueden actualizarse periódicamente.
+
+## 6. Realiza un piloto RFID acotado
+
+RFID no debería desplegarse en todo el almacén sin una prueba representativa.
+Un buen piloto selecciona un proceso con un problema medible y un alcance lo
+bastante pequeño para poder ajustarlo.
+
+El piloto debería validar:
+
+1. los artículos y materiales más exigentes;
+2. la ubicación y fijación de las etiquetas;
+3. las zonas y distancias de lectura;
+4. los falsos positivos y las lecturas perdidas;
+5. la velocidad real del proceso;
+6. la integración con la aplicación y el ERP;
+7. el coste por unidad y el retorno esperado.
+
+El éxito no es conseguir una lectura en una demostración. Es mantener una tasa
+de lectura fiable bajo las condiciones normales y excepcionales de la
+operativa.
+
+## 7. Gestiona los dispositivos como una flota
+
+Cuando hay más de unos pocos terminales, configurarlos uno a uno deja de ser
+sostenible. Una plataforma de [monitorización de
+terminales](/es/software/monitorizacion-terminales) permite aplicar
+configuraciones, desplegar aplicaciones, limitar funciones, actualizar equipos
+y obtener información de su estado.
+
+La política de gestión debería incluir:
+
+- inventario de dispositivos, modelos y versiones;
+- configuración de Wi-Fi, aplicaciones y periféricos;
+- perfiles según función o zona;
+- actualizaciones progresivas y reversibles;
+- bloqueo de funciones no necesarias;
+- cifrado, autenticación y caducidad de sesiones;
+- localización o bloqueo de los equipos perdidos, cuando corresponda;
+- estado de baterías, almacenamiento y conectividad;
+- procedimiento de sustitución y equipo de reserva.
+
+La gestión centralizada reduce tiempo de soporte, pero también evita que
+terminales con configuraciones distintas generen comportamientos diferentes en
+un mismo proceso.
+
+## 8. Prueba el flujo completo
+
+Las pruebas no deben limitarse a comprobar que el lector captura un código. Hay
+que validar la cadena completa, desde la orden generada por el ERP hasta la
+confirmación final.
+
+Incluye casos normales y excepciones:
+
+- artículo o ubicación incorrectos;
+- unidad no prevista;
+- lote caducado o número de serie duplicado;
+- lectura RFID múltiple o inesperada;
+- pérdida temporal de red;
+- reinicio o sustitución de un terminal;
+- reimpresión de una etiqueta;
+- cancelación de una tarea ya iniciada;
+- diferencia de stock y regularización.
+
+Cada error debe producir un mensaje comprensible para el operario y dejar
+información suficiente para que soporte pueda diagnosticarlo.
+
+## 9. Despliega por fases
+
+Una implantación progresiva reduce el riesgo y facilita el aprendizaje. Una
+secuencia habitual es:
+
+1. proceso y zona piloto;
+2. grupo reducido de usuarios;
+3. turno completo;
+4. ampliación a más zonas o procesos;
+5. estabilización y retirada del sistema anterior.
+
+Antes de cada fase conviene definir criterios de entrada y salida, formar a los
+usuarios y preparar un plan de contingencia. Durante un período limitado puede
+ser necesario comparar los datos del sistema nuevo con el inventario o
+procedimiento anterior.
+
+## 10. Mide si la implantación funciona
+
+Los indicadores deben definirse antes del piloto para poder comparar la
+situación inicial con el resultado. Algunos KPI útiles son:
+
+- precisión del inventario;
+- tiempo de recepción por unidad o palé;
+- líneas de picking por hora;
+- porcentaje de errores de preparación;
+- tiempo de localización de un activo;
+- tasa de lectura de códigos o RFID;
+- disponibilidad de los terminales;
+- incidencias y tiempo medio de resolución;
+- reimpresiones y consumo de etiquetas.
+
+La tecnología tiene sentido cuando mejora estos resultados de forma sostenida,
+no cuando solamente añade más datos o pantallas.
+
+## Checklist de implantación
+
+- [ ] El proceso actual está documentado y simplificado.
+- [ ] Cada dato tiene un sistema responsable.
+- [ ] Los datos maestros y los identificadores están validados.
+- [ ] La tecnología de captura se ha probado con productos reales.
+- [ ] Las excepciones y la falta de conexión están previstas.
+- [ ] Los terminales pueden configurarse y actualizarse centralmente.
+- [ ] El piloto tiene alcance, responsables y KPI definidos.
+- [ ] Los usuarios han participado en las pruebas y la formación.
+- [ ] Existe un plan de soporte, contingencia y sustitución de equipos.
+- [ ] El despliegue completo depende de los resultados del piloto.
+
+## Una implantación de principio a fin
+
+ERP, WMS, RFID y dispositivos no son proyectos independientes. Forman una
+única cadena de datos que empieza en el movimiento físico y acaba en una
+decisión de negocio.
+
+En S-IE analizamos la operativa, definimos la captura, conectamos los sistemas y
+preparamos los dispositivos para que la solución funcione en el almacén real.
+
+**¿Quieres digitalizar un proceso de almacén o validar un piloto RFID?**
+[Explícanos tu caso](/es/contacto) y te ayudaremos a definir un despliegue
+progresivo, medible y preparado para crecer.
