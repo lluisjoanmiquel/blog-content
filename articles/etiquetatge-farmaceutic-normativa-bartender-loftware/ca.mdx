@@ -1,0 +1,104 @@
+---
+title: "Etiquetatge farmacèutic: normativa, traçabilitat i control amb BarTender i Loftware"
+description: "Com controlar l’etiquetatge farmacèutic: normativa, DataMatrix, validació i integració amb ERP amb BarTender, Loftware i l’assessorament de S-IE."
+category: normativa
+slug: etiquetatge-farmaceutic-normativa-bartender-loftware
+date: 2026-09-30
+author: Equip S-IE
+cover: portada-etiquetatge-farma.svg
+draft: true
+---
+
+Una etiqueta amb el lot incorrecte, una caducitat mal traslladada o una plantilla obsoleta pot comprometre una operació farmacèutica encara que la impressió sigui perfecta. Per això, **l’etiquetatge farmacèutic s’ha de gestionar com un procés controlat**, connectat amb les dades del producte, les decisions de Qualitat i la traçabilitat de la producció.
+
+A **S-IE, com a distribuïdors de BarTender i Loftware**, ajudem les empreses a escollir i implantar el software d’etiquetatge que encaixa amb la seva operativa. En el sector farma, el projecte ha de considerar les plantilles, les integracions, els permisos, la impressió, la verificació i les evidències necessàries per donar suport a la validació.
+
+Aquesta guia se centra en **medicaments d’ús humà fabricats industrialment per al mercat espanyol i de la Unió Europea**. Els productes sanitaris, els medicaments veterinaris i els medicaments en investigació requereixen una anàlisi específica.
+
+## Quina normativa regula l’etiquetatge farmacèutic?
+
+Convé distingir tres nivells: la informació autoritzada del medicament, els dispositius de seguretat i el control del procés de fabricació.
+
+| Referència | Àmbit | Què cal considerar en el projecte |
+| --- | --- | --- |
+| Directiva 2001/83/CE i Reial decret 1345/2007 | Informació i identificació del medicament | Contingut de l’envàs, llegibilitat, permanència i correspondència amb l’etiquetatge autoritzat. |
+| Directiva 2011/62/UE i Reglament delegat (UE) 2016/161 | Prevenció de falsificacions | Identificador únic i dispositiu contra manipulacions en els medicaments inclosos en el seu àmbit. |
+| GMP / NCF, EudraLex volum 4, capítols 4 i 5 | Documentació i producció | Procediments, registres i control dels materials i de les operacions d’acondicionament. |
+| Annex 11 de les GMP | Sistemes informatitzats | Validació, seguretat i integritat de les dades en activitats GMP. |
+| Annex 15 de les GMP | Qualificació i validació | Comprovacions documentades dels equips i processos segons l’ús previst i el risc. |
+
+Les obligacions legals i les directrius GMP es complementen. El departament de Qualitat ha de concretar quins requisits afecten cada producte i cada etapa. Referències: [RD 1345/2007](https://www.boe.es/buscar/act.php?id=BOE-A-2007-19249), [Reglament 2016/161](https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80235) i [EudraLex volum 4](https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en).
+
+## Informació obligatòria: cada dada ha de venir de la font correcta
+
+L’annex III del RD 1345/2007 estableix la informació de l’embalatge exterior i de l’acondicionament primari, amb particularitats per a petits envasos i blísters. Inclou, entre altres dades, la denominació, dosificació, forma farmacèutica, contingut, advertiments, conservació, titular, **lot, caducitat i Codi Nacional**. També preveu el nom en Braille i els símbols que corresponguin.
+
+En una implantació, recomanem separar les dades fixes aprovades de les dades variables de producció. El text autoritzat pertany a la plantilla controlada; el lot i la caducitat s’han d’obtenir de la font definida per al procés. Això facilita identificar qui manté cada informació i evita que l’operador hagi de reconstruir l’etiqueta a cada impressió.
+
+## Serialització: el DataMatrix és una part del sistema
+
+Per als medicaments subjectes als dispositius de seguretat, l’identificador únic incorpora **codi de producte, número de sèrie, lot, caducitat i identificació nacional quan sigui exigible**. Es codifica en una matriu de dades amb les característiques establertes pel Reglament 2016/161. El règim afecta principalment medicaments de prescripció, amb excepcions i possibles ampliacions nacionals.
+
+L’envàs també ha de portar el dispositiu contra manipulacions corresponent. L’autenticitat es comprova amb el sistema de repositoris; **imprimir un número de sèrie no completa per si sol la serialització regulatòria**. La solució ha de coordinar la gestió dels identificadors, la impressió i els sistemes implicats. La [AEMPS explica el funcionament dels dispositius de seguretat](https://www.aemps.gob.es/industria-farmaceutica/dispositivos-de-seguridad-de-medicamentos-de-uso-humano/).
+
+En el projecte cal definir l’origen dels números de sèrie, la prevenció de duplicats i el tractament dels envasos rebutjats o de les reimpressions. El software d’etiquetatge pot formar part d’aquesta arquitectura; s’ha de comprovar l’abast de cada integració amb el sistema de serialització.
+
+## Llegir un codi i verificar-ne la qualitat són controls diferents
+
+Un lector comprova si pot descodificar un símbol en unes condicions determinades. Un verificador avalua la qualitat amb criteris normalitzats. Aquesta diferència és rellevant quan el codi ha de continuar sent llegible durant la cadena de subministrament.
+
+Els articles 5, 6 i 14 del Reglament 2016/161 regulen el suport, la qualitat i la verificació del codi. L’article 6 reconeix una qualitat d’almenys **1,5 segons ISO/IEC 15415:2011** com a via de conformitat. El fabricant ha de verificar també la llegibilitat i la correcció de la informació.
+
+Per definir la impressió, cal provar el conjunt real: impressora, resolució, velocitat, material, ribbon si s’utilitza i superfície d’aplicació. Recomanem fixar criteris d’acceptació i comprovar com afecten el desgast, la manipulació i les condicions de conservació. El sistema de verificació o de visió s’ha de seleccionar segons el procés i el risc.
+
+## Què aporten BarTender i Loftware?
+
+Les dues plataformes ofereixen eines per dissenyar, integrar i gestionar l’etiquetatge. **Les funcions disponibles depenen del producte, l’edició, la versió, la llicència i la configuració.** Un editor bàsic i una plataforma amb gestió documental i aprovacions cobreixen necessitats diferents.
+
+### BarTender: plantilles, automatització i gestió de l’etiquetatge
+
+BarTender permet treballar amb plantilles, dades variables i codis de barres, i integrar la impressió amb sistemes empresarials. Les seves solucions de gestió incorporen capacitats de control de versions, fluxos d’aprovació, permisos, registres d’activitat i signatures electròniques, segons l’abast contractat.
+
+En un entorn farmacèutic, aquestes eines poden ajudar a servir plantilles aprovades als punts d’impressió i reduir la introducció manual de dades. El fabricant descriu aplicacions amb dades procedents d’ERP i sistemes de serialització en la seva [solució per a la indústria farmacèutica](https://www.bartendersoftware.com/solutions/industries/pharmaceutical), i detalla les [funcions de gestió centralitzada](https://www.bartendersoftware.com/product/capabilities/manage).
+
+### Loftware: gestió documental i fluxos de qualitat
+
+Loftware ofereix solucions per centralitzar l’etiquetatge i connectar-lo amb sistemes empresarials. En les modalitats corresponents de Loftware Cloud, el fabricant descriu control d’accés per rols, versions de documents, aprovacions configurables, registres i signatures electròniques.
+
+També presenta entorns de desenvolupament, qualitat i producció, i opcions de suport documental a la validació. Aquestes capacitats poden facilitar el desplegament controlat dels canvis quan intervenen diversos departaments o centres. Cal confirmar quines formen part de la proposta concreta: [Loftware Cloud per a entorns regulats](https://www.loftware.com/products/loftware-cloud/compliance) i [integració i gestió](https://www.loftware.com/products/loftware-cloud/integrate-and-manage).
+
+### Com escollir la plataforma adequada?
+
+A S-IE plantegem la selecció a partir dels requisits del client: sistemes existents, nombre de punts d’impressió, gestió de versions, aprovacions de Qualitat, registres, continuïtat de servei i manteniment. També cal decidir el model d’allotjament i com es controlaran les actualitzacions.
+
+L’objectiu és escollir una configuració que cobreixi el procés amb una complexitat assumible. Pots consultar les nostres [solucions de software d’edició d’etiquetes](/software/edicio-etiquetes).
+
+## La validació correspon a l’ús real del sistema
+
+L’annex 11 exigeix un enfocament basat en el risc per als sistemes informatitzats utilitzats en activitats GMP. Cal considerar requisits, accessos, tractament de dades crítiques, còpies de seguretat, recuperació, canvis i registres d’auditoria segons el risc. L’annex 15 estableix el marc de qualificació i validació.
+
+**Disposar de funcions de compliment o de documentació del fabricant ajuda a validar, però no substitueix la validació de la implantació concreta.** El client ha de demostrar que el sistema funciona per a l’ús previst, amb les seves dades, equips, integracions i procediments. Les referències vigents es poden consultar a [EudraLex volum 4](https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en).
+
+Per exemple, les proves d’acceptació haurien de considerar què passa si falta el lot, si arriba una data incorrecta, si s’intenta imprimir una plantilla no aprovada o si una comunicació s’interromp. Les reimpressions també han de tenir un procediment definit, especialment quan hi ha identificadors únics.
+
+## Exemple pràctic: del lot aprovat a l’etiqueta impresa
+
+En un procés dissenyat per imprimir després de l’alliberament del lot, proposem definir aquesta seqüència:
+
+1. L’ordre d’impressió identifica el producte, lot, mercat i quantitat des del sistema autoritzat.
+2. El sistema selecciona la versió aprovada de la plantilla i comprova les dades necessàries.
+3. Un usuari amb permisos executa la impressió a l’equip assignat.
+4. Els controls definits comproven el text i el codi, i gestionen els rebutjos.
+5. El registre conserva les dades i els esdeveniments establerts, incloses les reimpressions.
+
+És una proposta operativa que s’ha d’adaptar al flux aprovat pel client. Permet concretar què ha de fer el software i quins controls corresponen als equips o als procediments.
+
+## Com t’ajuda S-IE a implantar l’etiquetatge farmacèutic?
+
+Com a distribuïdors de **BarTender i Loftware**, a S-IE podem ajudar-te a definir les plantilles, escollir la plataforma i integrar la impressió amb les fonts de dades. El projecte pot incorporar impressores industrials, etiquetes, consumibles i sistemes de captura o verificació, segons l’abast acordat.
+
+Treballem amb els responsables de producció, IT i Qualitat per concretar els requisits, preparar proves amb els materials reals i aportar informació tècnica per donar suport a la validació del client. La formació, el manteniment i la gestió dels canvis formen part de la continuïtat del procés.
+
+**Vols revisar el teu procés d’etiquetatge farmacèutic o implantar BarTender o Loftware?** [Contacta amb S-IE](/contacte) i explica’ns quins productes etiquetes, quins sistemes utilitzes i quins controls necessites.
+
+*Referències consultades el 30 de setembre de 2026. L’abast aplicable s’ha de concretar segons el producte, el mercat i les activitats del centre.*
