@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b2030"/><stop offset="1" stop-color="#164755"/></linearGradient>
+    <linearGradient id="box" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dce9ec"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-opacity=".2"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="190" r="290" fill="#2d7381" opacity=".15"/>
+  <circle cx="120" cy="830" r="260" fill="#2d7381" opacity=".15"/>
+  <text x="100" y="108" fill="#93d7ca" font-family="Arial,sans-serif" font-size="24" letter-spacing="5">S-IE · FARMA</text>
+  <text x="100" y="203" fill="white" font-family="Arial,sans-serif" font-size="66" font-weight="700">BarTender · Loftware</text>
+  <text x="103" y="262" fill="#bcdae0" font-family="Arial,sans-serif" font-size="30">GMP / NCF · DataMatrix · ERP</text>
+  <g>
+    <path d="M1010 360 1390 310 1480 365 1100 418Z" fill="#d2e4e8"/>
+    <path d="M1390 310 1480 365 1480 684 1390 634Z" fill="#afcbd2"/>
+    <path d="M1010 360 1390 310 1390 634 1010 684Z" fill="url(#box)"/>
+    <path d="M1010 400 1390 350 1390 401 1010 451Z" fill="#279987"/>
+    <path d="M1054 493 1300 461M1054 523 1240 499M1054 553 1190 535" fill="none" stroke="#7898a2" stroke-width="12"/>
+    <rect x="1050" y="587" width="82" height="55" rx="7" fill="#123b49"/>
+    <text x="1067" y="625" fill="white" font-family="Arial,sans-serif" font-size="32" font-weight="700">2D</text>
+    <path d="M1160 595 1310 575M1160 620 1280 604" stroke="#486c78" stroke-width="8"/>
+  </g>
+  <g fill="#f4f8fa" font-family="Arial,sans-serif" text-anchor="middle">
+    <rect x="100" y="365" width="245" height="255" rx="24" fill="#ffffff" fill-opacity=".07" stroke="#537987"/>
+    <rect x="400" y="365" width="245" height="255" rx="24" fill="#ffffff" fill-opacity=".07" stroke="#537987"/>
+    <rect x="700" y="365" width="245" height="255" rx="24" fill="#ffffff" fill-opacity=".07" stroke="#537987"/>
+    <g stroke="#93d7ca" stroke-width="7" fill="none">
+      <ellipse cx="222" cy="436" rx="42" ry="15"/>
+      <path d="M180 436v68c0 20 84 20 84 0v-68M180 470c0 20 84 20 84 0"/>
+      <path d="M483 420h80v105h-80zM500 445h45M500 465h45M500 485h25"/>
+      <circle cx="822" cy="473" r="50"/><path d="m797 474 18 18 35-41"/>
+    </g>
+    <text x="222" y="580" font-size="28" font-weight="700">DATA</text>
+    <text x="522" y="580" font-size="28" font-weight="700">GMP</text>
+    <text x="822" y="580" font-size="28" font-weight="700">CONTROL</text>
+  </g>
+  <g stroke="#93d7ca" stroke-width="5" fill="none"><path d="M355 495h30m-10-10 10 10-10 10M655 495h30m-10-10 10 10-10 10M955 495h35m-10-10 10 10-10 10"/></g>
+  <path d="M100 747h1380" stroke="#537987"/>
+  <text x="100" y="813" fill="#c8e0e5" font-family="Arial,sans-serif" font-size="25">Software · Hardware · Integració / Integración</text>
+  <text x="1480" y="813" text-anchor="end" fill="#93d7ca" font-family="Arial,sans-serif" font-size="25">s-ie.cat</text>
+</svg>

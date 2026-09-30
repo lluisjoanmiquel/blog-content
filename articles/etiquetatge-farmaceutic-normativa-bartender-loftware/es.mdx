@@ -1,0 +1,104 @@
+---
+title: "Etiquetado farmacéutico: normativa, trazabilidad y control con BarTender y Loftware"
+description: "Cómo controlar el etiquetado farmacéutico: normativa, DataMatrix, validación e integración con ERP con BarTender, Loftware y el asesoramiento de S-IE."
+category: normativa
+slug: etiquetado-farmaceutico-normativa-bartender-loftware
+date: 2026-09-30
+author: Equipo S-IE
+cover: portada-etiquetatge-farma.svg
+draft: false
+---
+
+Una etiqueta con el lote incorrecto, una caducidad mal trasladada o una plantilla obsoleta puede comprometer una operación farmacéutica aunque la impresión sea perfecta. Por eso, **el etiquetado farmacéutico debe gestionarse como un proceso controlado**, conectado con los datos del producto, las decisiones de Calidad y la trazabilidad de la producción.
+
+En **S-IE, como distribuidores de BarTender y Loftware**, ayudamos a las empresas a elegir e implantar el software de etiquetado que encaja con su operativa. En el sector farma, el proyecto debe considerar las plantillas, las integraciones, los permisos, la impresión, la verificación y las evidencias necesarias para apoyar la validación.
+
+Esta guía se centra en **medicamentos de uso humano fabricados industrialmente para el mercado español y de la Unión Europea**. Los productos sanitarios, los medicamentos veterinarios y los medicamentos en investigación requieren un análisis específico.
+
+## ¿Qué normativa regula el etiquetado farmacéutico?
+
+Conviene distinguir tres niveles: la información autorizada del medicamento, los dispositivos de seguridad y el control del proceso de fabricación.
+
+| Referencia | Ámbito | Qué considerar en el proyecto |
+| --- | --- | --- |
+| Directiva 2001/83/CE y Real Decreto 1345/2007 | Información e identificación del medicamento | Contenido del envase, legibilidad, permanencia y correspondencia con el etiquetado autorizado. |
+| Directiva 2011/62/UE y Reglamento Delegado (UE) 2016/161 | Prevención de falsificaciones | Identificador único y dispositivo contra manipulaciones en los medicamentos incluidos en su ámbito. |
+| GMP / NCF, EudraLex volumen 4, capítulos 4 y 5 | Documentación y producción | Procedimientos, registros y control de los materiales y de las operaciones de acondicionamiento. |
+| Anexo 11 de las GMP | Sistemas informatizados | Validación, seguridad e integridad de los datos en actividades GMP. |
+| Anexo 15 de las GMP | Cualificación y validación | Comprobaciones documentadas de los equipos y procesos según el uso previsto y el riesgo. |
+
+Las obligaciones legales y las directrices GMP se complementan. El departamento de Calidad debe concretar qué requisitos afectan a cada producto y cada etapa. Referencias: [RD 1345/2007](https://www.boe.es/buscar/act.php?id=BOE-A-2007-19249), [Reglamento 2016/161](https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80235) y [EudraLex volumen 4](https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en).
+
+## Información obligatoria: cada dato debe venir de la fuente correcta
+
+El anexo III del RD 1345/2007 establece la información del embalaje exterior y del acondicionamiento primario, con particularidades para pequeños envases y blísteres. Incluye, entre otros datos, la denominación, dosificación, forma farmacéutica, contenido, advertencias, conservación, titular, **lote, caducidad y Código Nacional**. También contempla el nombre en Braille y los símbolos que correspondan.
+
+En una implantación, recomendamos separar los datos fijos aprobados de los datos variables de producción. El texto autorizado pertenece a la plantilla controlada; el lote y la caducidad deben obtenerse de la fuente definida para el proceso. Esto facilita identificar quién mantiene cada información y evita que el operario tenga que reconstruir la etiqueta en cada impresión.
+
+## Serialización: el DataMatrix es una parte del sistema
+
+Para los medicamentos sujetos a los dispositivos de seguridad, el identificador único incorpora **código de producto, número de serie, lote, caducidad e identificación nacional cuando sea exigible**. Se codifica en una matriz de datos con las características establecidas por el Reglamento 2016/161. El régimen afecta principalmente a medicamentos de prescripción, con excepciones y posibles ampliaciones nacionales.
+
+El envase también debe llevar el dispositivo contra manipulaciones correspondiente. La autenticidad se comprueba con el sistema de repositorios; **imprimir un número de serie no completa por sí solo la serialización regulatoria**. La solución debe coordinar la gestión de los identificadores, la impresión y los sistemas implicados. La [AEMPS explica el funcionamiento de los dispositivos de seguridad](https://www.aemps.gob.es/industria-farmaceutica/dispositivos-de-seguridad-de-medicamentos-de-uso-humano/).
+
+En el proyecto hay que definir el origen de los números de serie, la prevención de duplicados y el tratamiento de los envases rechazados o de las reimpresiones. El software de etiquetado puede formar parte de esta arquitectura; debe comprobarse el alcance de cada integración con el sistema de serialización.
+
+## Leer un código y verificar su calidad son controles diferentes
+
+Un lector comprueba si puede descodificar un símbolo en unas condiciones determinadas. Un verificador evalúa la calidad con criterios normalizados. Esta diferencia es relevante cuando el código debe seguir siendo legible durante la cadena de suministro.
+
+Los artículos 5, 6 y 14 del Reglamento 2016/161 regulan el soporte, la calidad y la verificación del código. El artículo 6 reconoce una calidad de al menos **1,5 según ISO/IEC 15415:2011** como vía de conformidad. El fabricante debe verificar también la legibilidad y la corrección de la información.
+
+Para definir la impresión, hay que probar el conjunto real: impresora, resolución, velocidad, material, ribbon si se utiliza y superficie de aplicación. Recomendamos fijar criterios de aceptación y comprobar cómo afectan el desgaste, la manipulación y las condiciones de conservación. El sistema de verificación o de visión debe seleccionarse según el proceso y el riesgo.
+
+## ¿Qué aportan BarTender y Loftware?
+
+Ambas plataformas ofrecen herramientas para diseñar, integrar y gestionar el etiquetado. **Las funciones disponibles dependen del producto, la edición, la versión, la licencia y la configuración.** Un editor básico y una plataforma con gestión documental y aprobaciones cubren necesidades diferentes.
+
+### BarTender: plantillas, automatización y gestión del etiquetado
+
+BarTender permite trabajar con plantillas, datos variables y códigos de barras, e integrar la impresión con sistemas empresariales. Sus soluciones de gestión incorporan capacidades de control de versiones, flujos de aprobación, permisos, registros de actividad y firmas electrónicas, según el alcance contratado.
+
+En un entorno farmacéutico, estas herramientas pueden ayudar a servir plantillas aprobadas a los puntos de impresión y reducir la introducción manual de datos. El fabricante describe aplicaciones con datos procedentes de ERP y sistemas de serialización en su [solución para la industria farmacéutica](https://www.bartendersoftware.com/solutions/industries/pharmaceutical), y detalla las [funciones de gestión centralizada](https://www.bartendersoftware.com/product/capabilities/manage).
+
+### Loftware: gestión documental y flujos de calidad
+
+Loftware ofrece soluciones para centralizar el etiquetado y conectarlo con sistemas empresariales. En las modalidades correspondientes de Loftware Cloud, el fabricante describe control de acceso por roles, versiones de documentos, aprobaciones configurables, registros y firmas electrónicas.
+
+También presenta entornos de desarrollo, calidad y producción, y opciones de apoyo documental a la validación. Estas capacidades pueden facilitar el despliegue controlado de los cambios cuando intervienen varios departamentos o centros. Hay que confirmar cuáles forman parte de la propuesta concreta: [Loftware Cloud para entornos regulados](https://www.loftware.com/products/loftware-cloud/compliance) e [integración y gestión](https://www.loftware.com/products/loftware-cloud/integrate-and-manage).
+
+### ¿Cómo elegir la plataforma adecuada?
+
+En S-IE planteamos la selección a partir de los requisitos del cliente: sistemas existentes, número de puntos de impresión, gestión de versiones, aprobaciones de Calidad, registros, continuidad de servicio y mantenimiento. También hay que decidir el modelo de alojamiento y cómo se controlarán las actualizaciones.
+
+El objetivo es elegir una configuración que cubra el proceso con una complejidad asumible. Puedes consultar nuestras [soluciones de software de edición de etiquetas](/es/software/edicion-etiquetas).
+
+## La validación corresponde al uso real del sistema
+
+El anexo 11 exige un enfoque basado en el riesgo para los sistemas informatizados utilizados en actividades GMP. Deben considerarse requisitos, accesos, tratamiento de datos críticos, copias de seguridad, recuperación, cambios y registros de auditoría según el riesgo. El anexo 15 establece el marco de cualificación y validación.
+
+**Disponer de funciones de cumplimiento o de documentación del fabricante ayuda a validar, pero no sustituye la validación de la implantación concreta.** El cliente debe demostrar que el sistema funciona para el uso previsto, con sus datos, equipos, integraciones y procedimientos. Las referencias vigentes pueden consultarse en [EudraLex volumen 4](https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en).
+
+Por ejemplo, las pruebas de aceptación deberían considerar qué ocurre si falta el lote, si llega una fecha incorrecta, si se intenta imprimir una plantilla no aprobada o si una comunicación se interrumpe. Las reimpresiones también deben tener un procedimiento definido, especialmente cuando hay identificadores únicos.
+
+## Ejemplo práctico: del lote aprobado a la etiqueta impresa
+
+En un proceso diseñado para imprimir después de la liberación del lote, proponemos definir esta secuencia:
+
+1. La orden de impresión identifica el producto, lote, mercado y cantidad desde el sistema autorizado.
+2. El sistema selecciona la versión aprobada de la plantilla y comprueba los datos necesarios.
+3. Un usuario con permisos ejecuta la impresión en el equipo asignado.
+4. Los controles definidos comprueban el texto y el código, y gestionan los rechazos.
+5. El registro conserva los datos y los eventos establecidos, incluidas las reimpresiones.
+
+Es una propuesta operativa que debe adaptarse al flujo aprobado por el cliente. Permite concretar qué debe hacer el software y qué controles corresponden a los equipos o a los procedimientos.
+
+## ¿Cómo te ayuda S-IE a implantar el etiquetado farmacéutico?
+
+Como distribuidores de **BarTender y Loftware**, en S-IE podemos ayudarte a definir las plantillas, elegir la plataforma e integrar la impresión con las fuentes de datos. El proyecto puede incorporar impresoras industriales, etiquetas, consumibles y sistemas de captura o verificación, según el alcance acordado.
+
+Trabajamos con los responsables de producción, IT y Calidad para concretar los requisitos, preparar pruebas con los materiales reales y aportar información técnica para apoyar la validación del cliente. La formación, el mantenimiento y la gestión de los cambios forman parte de la continuidad del proceso.
+
+**¿Quieres revisar tu proceso de etiquetado farmacéutico o implantar BarTender o Loftware?** [Contacta con S-IE](/es/contacto) y cuéntanos qué productos etiquetas, qué sistemas utilizas y qué controles necesitas.
+
+*Referencias consultadas el 30 de septiembre de 2026. El ámbito aplicable debe concretarse según el producto, el mercado y las actividades del centro.*
