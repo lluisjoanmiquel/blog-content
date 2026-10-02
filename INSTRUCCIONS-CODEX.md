@@ -173,3 +173,11 @@ Desa el PDF dins la mateixa carpeta que els dos MDX. Per exemple:
 L'enllaç es mostra com un botó de descàrrega. Si hi ha PDF diferents per
 idioma, enllaça cadascun des de la fitxa corresponent. No publiquis una
 fitxa fins que el document o el seu enllaç verificat estigui disponible.
+
+### Tipus de producte al menú de Catàlegs
+
+Afegeix `catalogType:` al frontmatter dels dos idiomes amb la mateixa clau:
+`terminals`, `impressores`, `lectors`, `rfid`, `consumibles`, `software` o `altres`.
+Per exemple, el TC201 utilitza `catalogType: terminals`; les ZT610/ZT620,
+`catalogType: impressores`. La categoria continua sent `category: catalegs`.
+Els catàlegs sense un tipus vàlid apareixen a «Altres equips» i a «Tots».
