@@ -10,9 +10,9 @@ automàticament al web. **No hi ha res del codi del web en aquest repo**, així 
 
 ---
 
-## 1. Les úniques 3 categories que existeixen
+## 1. Les 4 categories disponibles
 
-Cada article ha de pertànyer a **una** d'aquestes tres categories. Al frontmatter
+Cada article ha de pertànyer a **una** d'aquestes quatre categories. Al frontmatter
 s'hi posa la **clau** (columna esquerra), sempre igual, mai el nom visible:
 
 | Clau (`category:`) | Nom CA     | Nom ES     |
@@ -20,6 +20,7 @@ s'hi posa la **clau** (columna esquerra), sempre igual, mai el nom visible:
 | `actualitat`       | Actualitat | Actualidad |
 | `guies`            | Guies      | Guías      |
 | `normativa`        | Normativa  | Normativa  |
+| `catalegs`         | Catàlegs   | Catálogos  |
 
 No inventis categories noves. Si cap no encaixa, fes servir `actualitat`.
 
@@ -55,7 +56,7 @@ Tot article comença amb aquest bloc entre `---`. Aquests són els camps:
 ---
 title: "Títol de l'article (pot portar accents i majúscules)"
 description: "Resum d'1-2 frases. Surt a Google i a les targetes. 120-160 caràcters."
-category: guies              # actualitat | guies | normativa
+category: guies              # actualitat | guies | normativa | catalegs
 slug: etiquetatge-gs1        # ← el tros final de la URL. LLEGEIX la secció 4.
 date: 2026-08-28             # AAAA-MM-DD
 author: Equip S-IE           # opcional
@@ -148,7 +149,7 @@ facis `push` fins que estigui llest).
 - [ ] Carpeta dins `articles/` amb nom net (minúscules i guions)
 - [ ] Existeixen **`ca.mdx` i `es.mdx`**
 - [ ] Els dos tenen `title`, `description`, `category`, `slug`, `date`
-- [ ] La `category` és una de les 3 vàlides i **igual** als dos fitxers
+- [ ] La `category` és una de les 4 vàlides i **igual** als dos fitxers
 - [ ] Els `slug` són nets (minúscules, guions, sense accents) i diferents CA/ES
 - [ ] Si hi ha `cover`, el fitxer d'imatge és a la mateixa carpeta
 - [ ] El cos està en Markdown, amb `##` per als apartats
@@ -156,3 +157,19 @@ facis `push` fins que estigui llest).
 Tens un exemple complet i funcional a
 `articles/etiquetatge-gs1-bones-practiques/` i una plantilla buida a
 `PLANTILLA-ca.mdx` / `PLANTILLA-es.mdx`.
+
+## 8. Compartir catàlegs en PDF
+
+Utilitza `category: catalegs` a `ca.mdx` i `es.mdx`. Cada catàleg té una
+fitxa pròpia amb títol, descripció, data, portada opcional i enllaç al PDF.
+Les fitxes apareixen a `/catalegs` i `/es/catalogos` i al llistat general.
+
+Desa el PDF dins la mateixa carpeta que els dos MDX. Per exemple:
+`articles/catalog-zebra-impressores/catalog.pdf`. Al cos de la fitxa:
+
+- CA: `[Descarrega el catàleg (PDF)](/blog-media/catalog-zebra-impressores/catalog.pdf)`
+- ES: `[Descargar el catálogo (PDF)](/blog-media/catalog-zebra-impressores/catalog.pdf)`
+
+L'enllaç es mostra com un botó de descàrrega. Si hi ha PDF diferents per
+idioma, enllaça cadascun des de la fitxa corresponent. No publiquis una
+fitxa fins que el document o el seu enllaç verificat estigui disponible.
