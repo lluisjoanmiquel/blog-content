@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102b3a"/><stop offset="1" stop-color="#071820"/></linearGradient><linearGradient id="accent"><stop stop-color="#4ae5c7"/><stop offset="1" stop-color="#00a8d4"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#bg)"/><circle cx="1370" cy="160" r="320" fill="#16465a" opacity=".28"/>
+<g font-family="Arial, sans-serif"><text x="100" y="125" font-size="28" fill="#6ee8d4" letter-spacing="5">S-IE / SOFTWARE</text><text x="95" y="255" font-size="106" font-weight="700" fill="#fff">BarTender 12</text><text x="102" y="323" font-size="34" fill="#bbd4de">Labeling · Automation · Track &amp; Trace</text>
+<path d="M490 550 H690 M910 550 H1110" stroke="#4ae5c7" stroke-width="6" fill="none"/>
+<rect x="100" y="440" width="390" height="300" rx="24" fill="#173e50" stroke="#377087" stroke-width="2"/>
+<rect x="1110" y="440" width="390" height="300" rx="24" fill="#173e50" stroke="#377087" stroke-width="2"/>
+<rect x="660" y="435" width="280" height="310" rx="24" fill="#fff"/>
+<g stroke="#82d9e5" stroke-width="6" fill="none"><rect x="230" y="480" width="130" height="85" rx="7"/><path d="M295 565v30m-45 0h90"/><path d="M1220 544c-20-36 8-62 37-57 17-48 88-43 100 0 54-8 71 71 18 76h-139c-21 0-32-11-16-19z"/></g>
+<text x="295" y="672" text-anchor="middle" font-size="32" fill="#fff">On-premises</text><text x="1305" y="672" text-anchor="middle" font-size="32" fill="#fff">Cloud</text>
+<rect x="690" y="477" width="130" height="12" rx="6" fill="#d1dde2"/><rect x="690" y="502" width="190" height="8" rx="4" fill="#d1dde2"/>
+<g fill="#123548"><rect x="690" y="540" width="5" height="90"/><rect x="701" y="540" width="11" height="90"/><rect x="718" y="540" width="4" height="90"/><rect x="728" y="540" width="16" height="90"/><rect x="750" y="540" width="7" height="90"/><rect x="764" y="540" width="3" height="90"/><rect x="775" y="540" width="12" height="90"/><rect x="794" y="540" width="7" height="90"/><rect x="808" y="540" width="15" height="90"/><rect x="830" y="540" width="4" height="90"/><rect x="842" y="540" width="11" height="90"/><rect x="863" y="540" width="5" height="90"/></g>
+<circle cx="801" cy="686" r="23" fill="url(#accent)"/><path d="m790 685 8 8 15-17" fill="none" stroke="#103746" stroke-width="4" stroke-linecap="round"/>
+<text x="100" y="832" font-size="25" fill="#90adbb">s-ie.cat</text><text x="1500" y="832" text-anchor="end" font-size="21" fill="#90adbb">Hybrid Labeling</text></g></svg>
