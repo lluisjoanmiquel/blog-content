@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0c2433"/><stop offset="1" stop-color="#1c4f5a"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#84d7c7"/></marker></defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="1480" cy="100" r="350" fill="#3a7380" opacity=".16"/>
+<text x="95" y="100" fill="#84d7c7" font-family="Arial,sans-serif" font-size="26" letter-spacing="4">S-IE · ETIQUETES / ETIQUETAS</text>
+<text x="95" y="193" fill="#fff" font-family="Arial,sans-serif" font-size="63" font-weight="700">etiquetes.s-ie.cat</text>
+<text x="95" y="251" fill="#c0dce2" font-family="Arial,sans-serif" font-size="29">Material · Adhesiu / Adhesivo · mm · Ø</text>
+<rect x="110" y="363" width="635" height="315" rx="22" fill="#edf5f7"/>
+<rect x="140" y="393" width="575" height="255" rx="16" fill="#fff" stroke="#7395a0" stroke-width="2"/>
+<rect x="168" y="424" width="150" height="12" rx="6" fill="#249987"/>
+<path d="M170 476h320M170 510h420M170 544h265" stroke="#b1c8cf" stroke-width="12" stroke-linecap="round"/>
+<g stroke="#84d7c7" stroke-width="3" fill="none"><path d="M140 337H715" marker-start="url(#arrow)" marker-end="url(#arrow)"/><path d="M780 393V648" marker-start="url(#arrow)" marker-end="url(#arrow)"/></g>
+<text x="425" y="320" text-anchor="middle" fill="#d9eeee" font-family="Arial,sans-serif" font-size="27">100 mm</text>
+<text x="805" y="530" fill="#d9eeee" font-family="Arial,sans-serif" font-size="27">50 mm</text>
+<g><ellipse cx="1205" cy="480" rx="165" ry="165" fill="#d1e3e8"/><path d="M1110 344C1030 380 1010 529 1070 598L1148 648C1084 566 1087 420 1160 355Z" fill="#789daa"/><ellipse cx="1258" cy="493" rx="165" ry="165" fill="#f7fafb" stroke="#91b1bc" stroke-width="3"/><circle cx="1258" cy="493" r="54" fill="#143c4a" stroke="#b4cdd5" stroke-width="15"/><circle cx="1258" cy="493" r="99" fill="none" stroke="#d9e7eb" stroke-width="3"/><circle cx="1258" cy="493" r="134" fill="none" stroke="#d9e7eb" stroke-width="3"/></g>
+<path d="M1093 700H1423" stroke="#84d7c7" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="1258" y="745" text-anchor="middle" fill="#d9eeee" font-family="Arial,sans-serif" font-size="27">Ø</text>
+<path d="M100 795H1500" stroke="#527887"/>
+<text x="100" y="850" fill="#c0dce2" font-family="Arial,sans-serif" font-size="23">Configuració guiada / Configuración guiada</text>
+<text x="1500" y="850" text-anchor="end" fill="#84d7c7" font-family="Arial,sans-serif" font-size="23">s-ie.cat</text>
+</svg>
