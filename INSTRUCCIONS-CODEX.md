@@ -174,6 +174,32 @@ L'enllaç es mostra com un botó de descàrrega. Si hi ha PDF diferents per
 idioma, enllaça cadascun des de la fitxa corresponent. No publiquis una
 fitxa fins que el document o el seu enllaç verificat estigui disponible.
 
+### Catàleg del producte i document d'accessoris en una mateixa fitxa
+
+Cada producte té **un únic registre**, amb `ca.mdx`, `es.mdx`, portada i els
+documents PDF dins la mateixa carpeta. Per mostrar dos botons de descàrrega
+independents al llistat i a la fitxa, utilitza al frontmatter:
+
+```yaml
+category: catalegs
+catalogType: terminals
+productPdf: cataleg-producte.pdf
+accessoriesPdf: guia-accessoris.pdf
+```
+
+- `productPdf`: catàleg o fitxa tècnica del producte (opcional).
+- `accessoriesPdf`: guia o catàleg d'accessoris (opcional).
+- Defineix els camps a **tots dos idiomes**. Pots utilitzar els mateixos PDF
+  o documents diferents per idioma, sempre dins la mateixa carpeta.
+- Els botons es titulen «Catàleg del producte» i «Accessoris» en català,
+  «Catálogo del producto» i «Accesorios» en castellà.
+- Omet el camp si el PDF encara no està disponible. No creïs una entrada
+  separada per als accessoris d'un producte que ja té fitxa.
+- Fes servir noms de fitxer sense espais, accents ni barres, acabats en `.pdf`.
+- No repeteixis aquests enllaços al cos: els botons es generen automàticament.
+- Els enllaços Markdown existents continuen funcionant; per migrar-los,
+  passa el nom del PDF al camp corresponent i elimina l'enllaç duplicat.
+
 ### Tipus de producte al menú de Catàlegs
 
 Afegeix `catalogType:` al frontmatter dels dos idiomes amb la mateixa clau:
