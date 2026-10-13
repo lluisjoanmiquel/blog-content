@@ -1,0 +1,119 @@
+---
+title: "Pantalles tàctils industrials Elo: connecta producció, dades i etiquetatge"
+description: "Descobreix com S-IE integra pantalles tàctils Elo amb captura de dades, ERP i impressió d’etiquetes per digitalitzar els punts de treball industrials."
+category: guies
+slug: pantalles-tactils-industrials-elo
+date: 2026-10-13
+author: Equip S-IE
+cover: portada-elo.svg
+draft: false
+---
+
+Una ordre de fabricació en paper, una lectura de codi anotada a mà i una etiqueta que s’imprimeix des d’un ordinador allunyat del procés. Quan aquestes tasques estan separades, l’operari ha de desplaçar-se, interpretar informació i repetir registres. Una **pantalla tàctil industrial situada al punt de treball** pot reunir la consulta, la captura i la validació en una mateixa operativa.
+
+A **S-IE, com a distribuïdors d’Elo**, plantegem les pantalles com una part de la solució d’identificació i etiquetatge: una interfície que ajuda l’operari a treballar amb les dades correctes, connectada a l’aplicació, als lectors i a les impressores que necessita el procés.
+
+El resultat depèn de l’equip, però també del disseny del flux: què s’ha de llegir, què s’ha de confirmar, qui pot modificar una dada i en quin moment s’ha de generar l’etiqueta.
+
+_Imatge de producte: Elo I-Series Steel, extreta de la [fitxa oficial del fabricant](https://docs.elotouch.com/Elo_I-Series_5_Steel_Android.pdf). Les aplicacions descrites són plantejaments de solució de S-IE; no impliquen funcions integrades de sèrie en la pantalla._
+
+## Què aporta una pantalla tàctil a peu de línia?
+
+La pantalla és el lloc on l’operari consulta l’ordre, identifica el material i registra el resultat. Ben integrada, permet substituir instruccions disperses per una seqüència clara: seleccionar la feina, llegir el codi, validar i continuar.
+
+Elo identifica la producció, el magatzem i les interfícies de control com a àmbits d’aplicació de les seves solucions tàctils. A S-IE ho traslladem a processos concrets: recepció de materials, preparació de comandes, control de lots, embalatge o expedició.
+
+Cal diferenciar **un monitor tàctil**, que necessita un ordinador o controlador, d’un **equip tot en un**, que incorpora la capacitat de còmput. Aquesta decisió condiciona el sistema operatiu, el manteniment i la manera de connectar els perifèrics.
+
+## Tres formats Elo i quan valorar-los
+
+| Format | Aplicació que pot encaixar | Què s’ha de definir |
+| --- | --- | --- |
+| Monitor tàctil amb ordinador separat | Ampliar un lloc amb programari existent o reutilitzar un PC adequat | Connexió de vídeo i tàctil, controladors, ubicació del PC i cablejat |
+| Pantalla de marc obert, com la família 90-Series | Integrar la interfície en un armari, una consola o una màquina | Disseny mecànic, fixació, ventilació i protecció del conjunt |
+| Ordinador tàctil tot en un, com I-Series Steel | Crear un punt compacte amb aplicació Android o web compatible | Aplicació, perifèrics, alimentació, comunicacions i gestió dels equips |
+
+La família **90-Series de marc obert** està orientada a la integració. La pantalla passa a formar part d’un conjunt dissenyat per al lloc de treball: el tancament i el muntatge són tan rellevants com el panell.
+
+**I-Series Steel** combina xassís d’acer inoxidable, pantalla tàctil PCAP i plataforma Android. La fitxa consultada presenta mides comercials de 10, 15 i 22 polzades, Android 14 i versions amb o sense alimentació PoE. Són opcions per valorar quan interessa un equip integrat i una superfície fàcil de netejar, sempre comprovant la referència concreta.
+
+## Aplicacions: de la lectura del material a l’etiqueta correcta
+
+### 1. Validació de materials i lots
+
+L’operari obre una ordre i llegeix l’etiqueta del material. L’aplicació comprova si l’article i el lot estan autoritzats per a aquella feina. Si hi ha una discrepància, pot bloquejar la confirmació i demanar una revisió.
+
+Per fer-ho, cal definir les dades mestres, les regles de validació i la connexió amb el sistema de gestió. La pantalla facilita la interacció; la decisió l’executa el programari.
+
+### 2. Impressió d’etiquetes al punt d’embalatge
+
+La pantalla pot presentar l’ordre, el producte, el lot i la quantitat, amb un botó d’impressió associat a una plantilla controlada. La informació pot arribar de l’ERP o d’una base de dades validada, evitant que l’operari hagi de tornar a escriure camps sensibles.
+
+A S-IE podem valorar aquesta arquitectura amb **BarTender o Loftware**, segons el projecte. En una solució Android, el disseny i el motor d’impressió poden residir en un servidor o servei compatible, mentre la pantalla executa la interfície de treball. Cal comprovar l’edició, les llicències, la impressora i el mètode de connexió.
+
+### 3. Controls de qualitat i incidències
+
+Una aplicació pot guiar un control amb camps obligatoris, resultats, motius de rebuig i identificació de l’usuari. Això facilita relacionar la comprovació amb l’ordre o el lot i consultar-la després, si el sistema de dades ho preveu.
+
+També cal acordar què passa quan es perd la connexió: bloqueig, cua local o operativa alternativa. Cada opció té implicacions per a la coherència del registre i la continuïtat de la feina.
+
+### 4. Recepció i expedició de mercaderies
+
+En un lloc fix, la pantalla pot mostrar què s’espera rebre o expedir, mentre el lector identifica caixes, palets o contenidors. L’aplicació contrasta quantitats i referències abans de confirmar el moviment o generar una etiqueta logística.
+
+Si l’operari necessita moure’s per tot el magatzem, un terminal mòbil pot complementar el punt fix. La tria s’ha de fer segons el recorregut de treball.
+
+## Pantalla, lector, aplicació i impressora: una arquitectura conjunta
+
+Un flux d’etiquetatge pot funcionar així:
+
+1. **Identificar:** l’usuari s’autentica i selecciona l’ordre.
+2. **Capturar:** el lector aporta l’article, el lot o l’identificador del contenidor.
+3. **Validar:** l’aplicació consulta les dades i les regles del procés.
+4. **Imprimir:** el servei d’impressió genera l’etiqueta amb la plantilla adequada.
+5. **Registrar:** el sistema desa el resultat, la quantitat i l’usuari segons l’abast acordat.
+
+S’han de definir els permisos, les reimpressions i el tractament dels errors. Connectar una pantalla a la xarxa no crea, per si sol, una integració amb l’ERP: cal un intercanvi de dades i unes responsabilitats clares.
+
+## Set criteris per escollir una pantalla industrial
+
+**1. Entorn i protecció.** Pols, esquitxades, humitat, temperatura i productes de neteja condicionen la selecció. A I-Series Steel, Elo especifica **IP65 frontal i IP54 posterior**. No és una protecció IP65 de tot l’equip ni una autorització per a qualsevol rentat. Cal revisar també connectors i muntatge.
+
+**2. Ús amb guants.** S’ha de provar la resposta tàctil amb els guants reals de l’operari. La tecnologia PCAP, per si sola, no garanteix compatibilitat amb tots els tipus o gruixos.
+
+**3. Mida i llegibilitat.** La distància de consulta, la il·luminació i la informació disponible determinen la mida adequada. Les accions freqüents han de tenir botons clars i llegibles.
+
+**4. Fixació i ergonomia.** Parets, braços o suports VESA han de permetre una postura còmoda, mantenir el pas lliure i facilitar l’accés per al manteniment.
+
+**5. Sistema operatiu i perifèrics.** Una aplicació web o Android i una aplicació Windows tenen requisits diferents. Cal validar lectors, ports, xarxa, controladors i serveis d’impressió abans de triar el maquinari.
+
+**6. Torn de treball i manteniment.** Cal confirmar el règim d’ús de la referència, la disponibilitat de recanvis, el suport i el procediment de substitució. Una declaració d’ús continu d’un model no s’ha d’estendre a tota la gamma.
+
+**7. Xarxa i alimentació.** Les versions PoE poden simplificar el cablejat, però requereixen una infraestructura i un pressupost de potència compatibles. La disponibilitat varia segons la configuració.
+
+## Gestió remota amb EloView
+
+Quan hi ha diversos punts de treball, convé mantenir configuracions coherents. **EloView** ofereix desplegament i gestió remota de dispositius Android Elo compatibles, distribució de continguts i aplicacions, i funcions de configuració d’experiències de quiosc.
+
+La gestió del dispositiu i la gestió de les dades de negoci són capes diferents. EloView no substitueix l’ERP ni les regles de traçabilitat. Les funcions disponibles, els serveis d’actualització i les subscripcions s’han de concretar per a cada desplegament.
+
+## Com plantegem el projecte a S-IE
+
+Comencem pel procés i una prova amb l’operativa real. Definim els camps que ha de veure l’usuari, els codis que llegirà, la informació que arriba del sistema de gestió i les etiquetes que s’han de generar. Després seleccionem la pantalla, els perifèrics i el muntatge.
+
+El pilot ha de provar també codis incorrectes, reimpressions, canvi de torn, caiguda de xarxa i ús amb guants. Podem comparar el temps per operació, les correccions manuals i els errors abans i després; les millores s’han de mesurar, sense donar-les per garantides.
+
+**Vols connectar el teu punt de treball amb l’etiquetatge i les dades de gestió?** Explica’ns el procés, l’entorn i el programari que utilitzeu. A S-IE podem valorar una solució amb pantalles Elo, captura de dades, impressió i integració ajustada a la vostra operativa.
+
+[Consulta les solucions d’informàtica industrial](/hardware/informatica-industrial), [les integracions de S-IE](/software/integracions) o [contacta amb nosaltres](/contacte).
+
+Per aprofundir en la connexió amb el sistema de gestió, llegeix també la [guia per implantar un magatzem connectat amb ERP i RFID](/guies/implantar-magatzem-connectat-erp-rfid-dispositius).
+
+## Fonts i documentació del fabricant
+
+- [Elo: aplicacions en automatització industrial](https://www.elotouch.com/industrial-automation).
+- [Elo 1990L i família 90-Series de marc obert](https://www.elotouch.com/open-frame-touchscreens-1990l.html).
+- [Fitxa oficial I-Series Steel amb Android](https://docs.elotouch.com/Elo_I-Series_5_Steel_Android.pdf).
+- [EloView: funcions de gestió i desplegament](https://www.elotouch.com/eloview/features).
+
+Informació consultada l’octubre de 2026. Les prestacions, les llicències i la disponibilitat s’han de confirmar per a la referència i el projecte concrets.
