@@ -1,0 +1,102 @@
+---
+title: "Impressió autònoma d’etiquetes: solucions S-IE amb SATO AEP"
+description: "Imprimeix etiquetes sense ordinador al punt de treball. S-IE integra lectors, balances i dades de producció amb solucions a mida basades en SATO AEP."
+category: guies
+slug: impressio-autonoma-etiquetes-sato-aep
+date: 2026-10-27
+author: Equip S-IE
+cover: portada-impressio-autonoma.svg
+draft: false
+---
+
+**Escanejar una ordre, pesar un producte o seleccionar una referència i obtenir l’etiqueta al mateix lloc on es necessita.** Aquesta és la idea d’un sistema autònom d’impressió d’etiquetes: acostar la identificació al procés i simplificar la feina de l’operari.
+
+A S-IE plantegem aquestes solucions a partir d’una pregunta: **què ha de fer la persona que etiqueta i quines dades necessita per fer-ho bé?** A partir d’aquí, definim els equips, l’aplicació i els consumibles que encaixen amb cada lloc de treball.
+
+## Què és la impressió autònoma amb SATO AEP?
+
+**SATO AEP (Application Enabled Printing)** permet executar aplicacions dins d’impressores compatibles. L’equip pot gestionar plantilles i dades, rebre informació de perifèrics i imprimir sense un PC al lloc de treball. La compatibilitat depèn del model, les interfícies i l’aplicació desenvolupada.
+
+Aquesta tecnologia és una de les bases que podem utilitzar a S-IE per configurar un punt d’etiquetatge adaptat al client. El valor del projecte és convertir les operacions quotidianes en un flux clar: identificar, validar i imprimir.
+
+> Autònom vol dir que el lloc d’impressió pot treballar sense un ordinador dedicat. Si necessita consultar dades externes, cal definir la connexió i què passarà quan no estigui disponible.
+
+## Quines solucions podem plantejar des de S-IE?
+
+Els exemples següents són possibles configuracions de projecte. Les funcions s’han de desenvolupar o configurar i validar amb les dades i els equips de cada empresa.
+
+### Escanejar i imprimir a producció
+
+En una taula de muntatge o al final d’una operació, l’operari llegeix el codi d’una ordre o una referència. L’aplicació interpreta la lectura, comprova els camps previstos i prepara l’etiqueta corresponent.
+
+Podem definir un procés que demani el lot o la quantitat, seleccioni el format i limiti els camps que es poden editar. Això ajuda a evitar que cada persona hagi de recordar quin disseny correspon a cada producte.
+
+**Aplicacions:** identificació de components, caixes, productes acabats i fabricacions curtes amb canvis freqüents de referència.
+
+### Pesar i etiquetar amb la mateixa operació
+
+En un lloc de pesatge, es pot estudiar la comunicació entre la balança i la impressora perquè l’aplicació incorpori el pes a l’etiqueta, juntament amb la referència, el lot i altres dades definides.
+
+S-IE pot valorar el protocol de la balança, les unitats, la tara i les condicions que autoritzen la impressió. Per exemple, el projecte pot preveure imprimir només quan s’hagi rebut una lectura estable vàlida, si la balança proporciona aquesta informació.
+
+**Aplicacions:** envasat, preparació de materials, sacs, mostres i expedicions amb pes variable.
+
+### Identificar materials i mostres a recepció
+
+Un punt d’etiquetatge a recepció pot guiar la introducció del proveïdor, la referència i el lot intern. Per a mostres de control, podem plantejar una numeració i els camps necessaris perquè la identificació es mantingui durant el recorregut posterior.
+
+Cal acordar on es genera l’identificador i on es conserva el registre. Imprimir un codi és només una part de la traçabilitat: també s’ha de poder relacionar amb la informació correcta.
+
+### Imprimir a partir d’un PLC o d’una ordre de treball
+
+En una línia industrial, podem estudiar una arquitectura en què el sistema de control enviï les dades variables i la impressora gestioni el format d’etiqueta.
+
+El projecte ha de concretar el disparador d’impressió, els missatges de confirmació, la gestió d’errors i la política de reimpressió. **Una ordre reenviada després d’una incidència no hauria de generar duplicats sense control.**
+
+### Connectar el punt d’impressió amb l’ERP o el magatzem
+
+Quan les dades mestres ja existeixen a l’ERP o al sistema de magatzem, podem valorar una integració perquè l’operari recuperi la informació a partir d’una ordre o un codi.
+
+L’abast depèn de les API, els permisos i les comunicacions disponibles. També definim si cal retornar el resultat de la impressió o registrar l’operació en un sistema extern.
+
+## Funcionament local o connectat: escollir segons el procés
+
+| Configuració | Quan pot encaixar | Què cal definir |
+| --- | --- | --- |
+| Aplicació amb dades locals | Tasques delimitades amb referències i formats disponibles al dispositiu | Actualització de dades, còpies i recuperació |
+| Aplicació connectada | Informació que s’ha de consultar en temps real | Xarxa, autenticació i resposta davant d’incidències |
+| Solució amb continuïtat local prevista | Processos que necessiten continuar durant determinades interrupcions | Dades autoritzades, límits i sincronització posterior |
+
+**Treballar sense PC no garanteix treballar sense xarxa.** El funcionament durant una desconnexió s’ha de dissenyar i provar expressament.
+
+## AEP i Web AEP: tecnologia al servei de l’operari
+
+AEP permet construir lògica d’impressió integrada. **Web AEP**, disponible en models compatibles com CT4-LX i FX3-LX segons la documentació de SATO, permet plantejar interfícies amb tecnologies web i aplicacions locals o connectades.
+
+Per a l’usuari, la decisió pràctica és quina informació veurà a la pantalla, quins passos haurà de completar i com resoldrà una incidència. A S-IE orientem la selecció tecnològica a aquestes necessitats.
+
+La documentació del fabricant inclou famílies industrials **CL-SXR i CLNX Plus**, així com **CT4-LX i FX3-LX**, entre les opcions AEP. Cal verificar les prestacions concretes, el firmware i les opcions de cada equip abans de tancar la solució.
+
+## Què inclou el plantejament d’un projecte S-IE?
+
+1. **Estudi del procés:** què s’etiqueta, qui ho fa, amb quin ritme i d’on provenen les dades.
+2. **Selecció del conjunt:** impressora, perifèrics, connexions i ubicació.
+3. **Aplicació i plantilles:** camps obligatoris, validacions, formats i criteris de reimpressió.
+4. **Etiquetes i ribbons:** material, adhesiu i qualitat d’impressió segons la superfície i l’entorn.
+5. **Prova pilot:** lectures reals, dades incompletes, desconnexions i recuperació després d’errors.
+6. **Posada en marxa i suport:** formació, documentació i manteniment acordat.
+
+L’objectiu és reduir passos manuals i facilitar un resultat repetible. L’estalvi i la millora operativa s’han de valorar amb el procés real, incloent-hi desenvolupament, integració i suport.
+
+## Vols simplificar un punt d’etiquetatge?
+
+Explica’ns **què necessites identificar, quines dades ha de portar l’etiqueta i com es treballa avui**. A S-IE t’ajudem a valorar si una solució d’impressió autònoma pot encaixar en la teva producció, recepció o magatzem.
+
+[Parlem del teu projecte d’impressió autònoma](/contacte).
+
+### Informació relacionada
+
+- [Solucions SATO a S-IE](/partners/sato)
+- [Impressió i codificació d’etiquetes RFID amb S-IE](/guies/impressio-etiquetes-rfid-sato)
+- [Accessoris per completar el procés d’etiquetatge](/guies/accessoris-labelmate-rebobinadors-dispensadors-etiquetes)
+- Documentació del fabricant: [SATO AEP i Web AEP](https://www.satoeurope.com/es/products/aep.php#aep) i [plataforma AEP i equips compatibles](https://www.satoeurope.com/software/aep.php).

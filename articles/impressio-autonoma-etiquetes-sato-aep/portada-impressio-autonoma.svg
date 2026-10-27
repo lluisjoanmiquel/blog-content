@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810">
+<rect width="1440" height="810" fill="#0d2030"/>
+<circle cx="1180" cy="130" r="380" fill="#143548"/>
+<path d="M0 710H1440" stroke="#25465a" stroke-width="2"/>
+<g fill="none" stroke="#66dac2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M333 302H520V420H600M333 564H520V420M1000 420H1140"/>
+<path d="m580 400 20 20-20 20M1120 400l20 20-20 20"/>
+<path d="M800 200V260" stroke-dasharray="10 14"/>
+</g>
+<g font-family="Arial, sans-serif">
+<text x="80" y="100" fill="#fff" font-size="48" font-weight="700">S-IE</text>
+<text x="80" y="149" fill="#a9c5d4" font-size="25">SOLUCIONS · SOLUCIONES</text>
+<rect x="120" y="235" width="215" height="138" rx="22" fill="#edf4f7"/>
+<g fill="#0d2030"><rect x="165" y="267" width="7" height="59"/><rect x="178" y="267" width="4" height="59"/><rect x="187" y="267" width="11" height="59"/><rect x="205" y="267" width="5" height="59"/><rect x="217" y="267" width="8" height="59"/><rect x="231" y="267" width="3" height="59"/><rect x="241" y="267" width="12" height="59"/><rect x="260" y="267" width="6" height="59"/><rect x="272" y="267" width="13" height="59"/></g>
+<text x="227" y="412" fill="#a9c5d4" font-size="22" text-anchor="middle">SCAN</text>
+<rect x="120" y="489" width="215" height="135" rx="22" fill="#edf4f7"/>
+<path d="M147 515H308" stroke="#0d2030" stroke-width="7"/>
+<rect x="158" y="539" width="138" height="54" rx="7" fill="#c9eee5"/>
+<text x="227" y="576" fill="#0d2030" font-size="28" text-anchor="middle">12.50 kg</text>
+<rect x="666" y="116" width="268" height="75" rx="18" fill="#23465a"/>
+<text x="800" y="164" fill="#fff" font-size="27" text-anchor="middle">ERP · API · PLC</text>
+<rect x="600" y="270" width="400" height="320" rx="32" fill="#e4edf2"/>
+<rect x="625" y="295" width="350" height="105" rx="17" fill="#24495b"/>
+<rect x="650" y="314" width="173" height="66" rx="10" fill="#66dac2"/>
+<text x="736" y="357" fill="#0d2030" font-size="32" font-weight="700" text-anchor="middle">AEP</text>
+<circle cx="917" cy="348" r="13" fill="#66dac2"/>
+<rect x="636" y="437" width="328" height="30" rx="10" fill="#102a3c"/>
+<path d="M682 452H918V672H682Z" fill="#fff"/>
+<rect x="708" y="478" width="116" height="13" rx="4" fill="#193b4d"/>
+<rect x="708" y="504" width="183" height="8" rx="4" fill="#9db1bd"/>
+<rect x="708" y="525" width="153" height="8" rx="4" fill="#9db1bd"/>
+<g fill="#193b4d"><rect x="708" y="557" width="7" height="64"/><rect x="723" y="557" width="13" height="64"/><rect x="744" y="557" width="5" height="64"/><rect x="756" y="557" width="9" height="64"/><rect x="773" y="557" width="4" height="64"/><rect x="785" y="557" width="15" height="64"/><rect x="808" y="557" width="7" height="64"/><rect x="823" y="557" width="12" height="64"/><rect x="842" y="557" width="5" height="64"/><rect x="854" y="557" width="11" height="64"/><rect x="873" y="557" width="15" height="64"/></g>
+<rect x="1141" y="337" width="190" height="166" rx="14" fill="#c9a779"/>
+<path d="M1236 337V503M1141 378H1331" stroke="#a37c4d" stroke-width="3"/>
+<rect x="1171" y="399" width="81" height="66" rx="4" fill="#fff"/>
+<path d="M1184 414H1237M1184 426H1225M1184 438H1237M1184 450H1231" stroke="#193b4d" stroke-width="4"/>
+<text x="800" y="754" fill="#a9c5d4" font-size="25" text-anchor="middle">IDENTIFICAR · VALIDAR · IMPRIMIR</text>
+</g></svg>

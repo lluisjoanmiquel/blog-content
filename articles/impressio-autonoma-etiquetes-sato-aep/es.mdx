@@ -1,0 +1,101 @@
+---
+title: "Impresión autónoma de etiquetas: soluciones S-IE con SATO AEP"
+description: "Imprime etiquetas sin ordenador en el puesto de trabajo. S-IE integra lectores, básculas y datos de producción con soluciones a medida basadas en SATO AEP."
+category: guies
+slug: impresion-autonoma-etiquetas-sato-aep
+date: 2026-10-27
+author: Equipo S-IE
+cover: portada-impressio-autonoma.svg
+draft: false
+---
+
+**Escanear una orden, pesar un producto o seleccionar una referencia y obtener la etiqueta en el mismo lugar donde se necesita.** Esta es la idea de un sistema autónomo de impresión de etiquetas: acercar la identificación al proceso y simplificar el trabajo del operario.
+
+En S-IE planteamos estas soluciones a partir de una pregunta: **¿qué debe hacer la persona que etiqueta y qué datos necesita para hacerlo bien?** A partir de ahí, definimos los equipos, la aplicación y los consumibles que encajan con cada puesto de trabajo.
+
+## ¿Qué es la impresión autónoma con SATO AEP?
+
+**SATO AEP (Application Enabled Printing)** permite ejecutar aplicaciones dentro de impresoras compatibles. El equipo puede gestionar plantillas y datos, recibir información de periféricos e imprimir sin un PC en el puesto de trabajo. La compatibilidad depende del modelo, las interfaces y la aplicación desarrollada.
+
+Esta tecnología es una de las bases que podemos utilizar en S-IE para configurar un punto de etiquetado adaptado al cliente. El valor del proyecto consiste en convertir las operaciones cotidianas en un flujo claro: identificar, validar e imprimir.
+
+> Autónomo significa que el puesto de impresión puede trabajar sin un ordenador dedicado. Si necesita consultar datos externos, hay que definir la conexión y qué ocurrirá cuando no esté disponible.
+
+## ¿Qué soluciones podemos plantear desde S-IE?
+
+Los siguientes ejemplos son posibles configuraciones de proyecto. Las funciones deben desarrollarse o configurarse y validarse con los datos y los equipos de cada empresa.
+
+### Escanear e imprimir en producción
+
+En una mesa de montaje o al finalizar una operación, el operario lee el código de una orden o una referencia. La aplicación interpreta la lectura, comprueba los campos previstos y prepara la etiqueta correspondiente.
+
+Podemos definir un proceso que solicite el lote o la cantidad, seleccione el formato y limite los campos que se pueden editar. Esto ayuda a evitar que cada persona tenga que recordar qué diseño corresponde a cada producto.
+
+**Aplicaciones:** identificación de componentes, cajas, productos acabados y fabricaciones cortas con cambios frecuentes de referencia.
+
+### Pesar y etiquetar en la misma operación
+
+En un puesto de pesaje, se puede estudiar la comunicación entre la báscula y la impresora para que la aplicación incorpore el peso a la etiqueta, junto con la referencia, el lote y otros datos definidos.
+
+S-IE puede valorar el protocolo de la báscula, las unidades, la tara y las condiciones que autorizan la impresión. Por ejemplo, el proyecto puede prever imprimir solo cuando se haya recibido una lectura estable válida, si la báscula proporciona esa información.
+
+**Aplicaciones:** envasado, preparación de materiales, sacos, muestras y expediciones con peso variable.
+
+### Identificar materiales y muestras en recepción
+
+Un punto de etiquetado en recepción puede guiar la introducción del proveedor, la referencia y el lote interno. Para muestras de control, podemos plantear una numeración y los campos necesarios para mantener la identificación durante su recorrido posterior.
+
+Hay que acordar dónde se genera el identificador y dónde se conserva el registro. Imprimir un código es solo una parte de la trazabilidad: también debe poder relacionarse con la información correcta.
+
+### Imprimir a partir de un PLC o de una orden de trabajo
+
+En una línea industrial, podemos estudiar una arquitectura en la que el sistema de control envíe los datos variables y la impresora gestione el formato de etiqueta.
+
+El proyecto debe concretar el disparador de impresión, los mensajes de confirmación, la gestión de errores y la política de reimpresión. **Una orden reenviada después de una incidencia no debería generar duplicados sin control.**
+
+### Conectar el punto de impresión con el ERP o el almacén
+
+Cuando los datos maestros ya existen en el ERP o en el sistema de almacén, podemos valorar una integración para que el operario recupere la información a partir de una orden o un código.
+
+El alcance depende de las API, los permisos y las comunicaciones disponibles. También definimos si es necesario devolver el resultado de la impresión o registrar la operación en un sistema externo.
+
+## Funcionamiento local o conectado: elegir según el proceso
+
+| Configuración | Cuándo puede encajar | Qué hay que definir |
+| --- | --- | --- |
+| Aplicación con datos locales | Tareas delimitadas con referencias y formatos disponibles en el dispositivo | Actualización de datos, copias y recuperación |
+| Aplicación conectada | Información que debe consultarse en tiempo real | Red, autenticación y respuesta ante incidencias |
+| Solución con continuidad local prevista | Procesos que necesitan continuar durante determinadas interrupciones | Datos autorizados, límites y sincronización posterior |
+
+**Trabajar sin PC no garantiza trabajar sin red.** El funcionamiento durante una desconexión debe diseñarse y probarse expresamente.
+
+## AEP y Web AEP: tecnología al servicio del operario
+
+AEP permite construir lógica de impresión integrada. **Web AEP**, disponible en modelos compatibles como CT4-LX y FX3-LX según la documentación de SATO, permite plantear interfaces con tecnologías web y aplicaciones locales o conectadas.
+
+Para el usuario, la decisión práctica es qué información verá en la pantalla, qué pasos deberá completar y cómo resolverá una incidencia. En S-IE orientamos la selección tecnológica a estas necesidades.
+
+La documentación del fabricante incluye familias industriales **CL-SXR y CLNX Plus**, así como **CT4-LX y FX3-LX**, entre las opciones AEP. Hay que verificar las prestaciones concretas, el firmware y las opciones de cada equipo antes de cerrar la solución.
+
+## ¿Qué incluye el planteamiento de un proyecto S-IE?
+
+1. **Estudio del proceso:** qué se etiqueta, quién lo hace, a qué ritmo y de dónde proceden los datos.
+2. **Selección del conjunto:** impresora, periféricos, conexiones y ubicación.
+3. **Aplicación y plantillas:** campos obligatorios, validaciones, formatos y criterios de reimpresión.
+4. **Etiquetas y ribbons:** material, adhesivo y calidad de impresión según la superficie y el entorno.
+5. **Prueba piloto:** lecturas reales, datos incompletos, desconexiones y recuperación después de errores.
+6. **Puesta en marcha y soporte:** formación, documentación y mantenimiento acordado.
+
+El objetivo es reducir pasos manuales y facilitar un resultado repetible. El ahorro y la mejora operativa deben valorarse con el proceso real, incluyendo desarrollo, integración y soporte.
+
+## ¿Quieres simplificar un punto de etiquetado?
+
+Cuéntanos **qué necesitas identificar, qué datos debe llevar la etiqueta y cómo se trabaja hoy**. En S-IE te ayudamos a valorar si una solución de impresión autónoma puede encajar en tu producción, recepción o almacén.
+
+[Hablemos de tu proyecto de impresión autónoma](/es/contacto).
+
+### Información relacionada
+
+- [Soluciones SATO en S-IE](/es/partners/sato)
+- [Impresión y codificación de etiquetas RFID con S-IE](/es/guias/impresion-etiquetas-rfid-sato)
+- Documentación del fabricante: [SATO AEP y Web AEP](https://www.satoeurope.com/es/products/aep.php#aep) y [plataforma AEP y equipos compatibles](https://www.satoeurope.com/software/aep.php).
