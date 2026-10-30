@@ -1,0 +1,128 @@
+---
+title: "Identificació i traçabilitat sanitària: guia per a hospitals"
+description: "Com millorar la identificació de pacients, mostres i equips. Guia per a gestors sanitaris sobre codis de barres, RFID, integració i indicadors de resultat."
+category: guies
+slug: identificacio-tracabilitat-sanitaria-hospitals
+date: 2026-10-30
+author: Equip S-IE
+cover: portada-sanitat.jpg
+draft: false
+---
+
+Una mostra que arriba al laboratori amb una identificació dubtosa. Una bomba d’infusió que consta a l’inventari però que ningú localitza. Un professional que torna a introduir dades que ja existeixen al sistema. Són situacions diferents, però comparteixen una necessitat: **vincular de manera fiable cada persona, producte i equip amb la informació i el procés que li corresponen**.
+
+Els **sistemes d’identificació i traçabilitat sanitària** poden ajudar a fer aquesta connexió mitjançant polseres, etiquetes, codis de barres, terminals mòbils i RFID. El resultat depèn de com s’integrin amb el treball assistencial i amb els sistemes d’informació del centre.
+
+Aquesta guia s’adreça a direcció, infermeria, qualitat, logística, compres i sistemes d’informació d’hospitals, clíniques i altres centres sanitaris. Proposa criteris per decidir **on començar, què exigir a una solució i com comprovar si aporta valor**.
+
+## Quins problemes de gestió pot ajudar a resoldre la identificació automàtica?
+
+Abans d’escollir dispositius, convé relacionar cada necessitat amb un procés i un responsable.
+
+| Àmbit | Necessitat a resoldre | Aplicació possible | Què hauria de comprovar la direcció |
+| --- | --- | --- | --- |
+| Admissió i hospitalització | Coherència entre persona, episodi i registre | Polsera identificativa vinculada al sistema del centre | Com es corregeixen les dades i es controla la reimpressió |
+| Laboratori | Mantenir la identitat de cada mostra | Lectura de polsera i etiqueta generada al punt de recollida | Com es gestionen incidències, rebutjos i noves extraccions |
+| Medicació | Associar l’actuació amb el pacient i la prescripció | Lectura de pacient i medicament integrada amb l’aplicació clínica | Quines comprovacions fa el programari i qui resol les alertes |
+| Magatzem i farmàcia | Conèixer existències, lots i caducitats | Lectura de codis en recepció, dispensació i consum | Si el registre actualitza realment l’estoc i permet gestionar retirades |
+| Equipament | Trobar equips i conèixer-ne l’estat | Identificació d’actius i, quan calgui, infraestructura de localització | Precisió necessària i distinció entre disponible, en ús i pendent de neteja |
+| Esterilització | Relacionar material amb els registres del seu circuit | Identificació d’instruments, contenidors o lots | Resistència del marcatge i integració amb la validació del procés |
+
+La prioritat serà diferent en un hospital amb incidències d’etiquetatge que en una clínica que dedica massa temps a buscar equipament. **Un projecte útil comença amb un problema concret i una dada de partida.**
+
+## Identificació del pacient: una polsera ha de formar part d’un procediment
+
+La [recomanació de l’OMS sobre identificació de pacients](https://www.who.int/docs/default-source/integrated-health-services-%28ihs%29/psf/patient-safety-solutions/ps-solution2-patient-identification.pdf) planteja comprovar almenys dos identificadors, com el nom i la data de naixement; el número d’habitació no n’ha de ser un. També destaca la formació i la gestió de situacions especials.
+
+La polsera i la lectura del codi poden donar suport a aquest procediment. **Escanejar una polsera no garanteix, per si sol, que les dades siguin correctes ni que s’hagi completat la verificació exigida pel centre.**
+
+Per a gestió, les preguntes són concretes: qui valida la identitat a l’alta del registre? Què passa si es detecta un duplicat? Com es substitueix una polsera deteriorada? Quin circuit s’aplica si el pacient no es pot identificar pels mitjans habituals? Les respostes s’han d’acordar amb els responsables assistencials abans de desplegar equips.
+
+## Mostres i medicació: portar la comprovació al punt d’atenció
+
+En mostres, la identificació ha de mantenir la relació entre pacient, petició i recipient durant tot el circuit. La documentació de [Zebra sobre etiquetatge al costat del pacient](https://medialibrary.zebra.com/content/dam/zebra_new_ia/en-us/solutions-verticals/vertical-solutions/healthcare/white-paper/bedside-specimen-labeling-white-paper-en-us.pdf) descriu l’ús de lectura de polsera, consulta de la petició i impressió sota demanda al punt de recollida.
+
+Per valorar un pilot, cal observar què passa quan es cancel·la una petició, falla la connexió o una etiqueta no es pot llegir. L’aplicació ha de gestionar aquests casos segons el protocol del centre, amb una traça de la incidència i de la seva resolució.
+
+![Professional sanitari llegint el codi d’una mostra al punt d’atenció](identificacio-mostres.jpg)
+
+*Imatge de Zebra Technologies: captura de dades aplicada a la identificació de mostres.*
+
+En medicació, la lectura del pacient i del producte pot alimentar les comprovacions de l’aplicació clínica. El [model il·lustratiu de GS1 per a hospitalització](https://gs1hospital-st.gs1.org/wards/index.php) mostra aquesta vinculació amb el registre assistencial. És un exemple de procés, que cada centre ha d’adaptar i validar.
+
+**El lector captura dades; les comprovacions depenen del programari, de la prescripció i dels protocols configurats.** Una alerta sense un responsable i un procediment de resposta pot acabar generant interrupcions o dreceres de treball.
+
+## Codis de barres, GS1 DataMatrix o RFID: què convé en cada cas?
+
+Els codis de barres són adequats per registrar una acció deliberada: identificar una polsera, llegir un envàs o confirmar un moviment. Cal provar-los amb les mides, superfícies i condicions reals del centre.
+
+[GS1 Healthcare recomana GS1 DataMatrix per a la identificació de productes sanitaris](https://support.gs1.org/support/solutions/articles/43000734222/). Aquest codi pot incloure identificador de producte, lot, caducitat i número de sèrie. L’aplicació ha de saber interpretar les dades presents; un QR que només obre una pàgina web no té necessàriament la mateixa funció.
+
+La **RFID** pot ser interessant per a inventaris i controls de pas. Per localitzar actius, cal definir si es necessita conèixer l’última lectura, una zona o una posició actualitzada. Una etiqueta RFID passiva, tota sola, no ofereix localització contínua: fan falta lectors, cobertura i programari adequats. Les [solucions de seguiment d’actius sanitaris de Zebra](https://www.zebra.com/us/en/industry/healthcare/use-case/healthcare-asset-tracking.html) s’orienten a aquesta necessitat de visibilitat.
+
+La pregunta de compra és: **quina decisió es prendrà amb la dada capturada i amb quina precisió s’ha de disposar d’aquesta dada?**
+
+## Integració, consumibles i continuïtat: què cal exigir al projecte?
+
+La proposta de [Zebra per a hospitals i sistemes sanitaris](https://www.zebra.com/es/es/industry/healthcare/sub-vertical/hospitals-and-health-systems.html) combina identificació, impressió i mobilitat. Per convertir aquestes peces en una solució operativa, recomanem revisar cinc aspectes:
+
+1. **Sistemes d’origen.** Identificar on resideixen els pacients i episodis, les peticions de laboratori, les prescripcions, l’estoc i els actius. Acordar els intercanvis amb els proveïdors del sistema hospitalari, el laboratori i l’ERP.
+2. **Dades i permisos.** Definir què conté cada codi, què es consulta al servidor, qui hi accedeix i què queda registrat. Validar el disseny amb sistemes, seguretat i protecció de dades.
+3. **Ús real.** Provar lectura amb guants, ergonomia, autonomia per torn, càrrega, soroll i cobertura. Els models sanitaris poden incorporar materials preparats per a la neteja, però cal seguir les [compatibilitats i instruccions del fabricant](https://www.zebra.com/us/en/products/printers/healthcare-printers.html) per a cada equip.
+4. **Polseres i etiquetes.** Assajar llegibilitat, fixació i resistència durant el temps i les condicions d’ús previstos: fregament, humitat, refrigeració o processos específics. Una etiqueta d’oficina no s’ha de donar per adequada per a qualsevol circuit clínic.
+5. **Continuïtat.** Establir què es fa quan fallen xarxa, impressora o terminal; quins recanvis hi ha i com es reconcilien els registres després d’una incidència.
+
+![Lectura de codis de barres en un entorn de farmàcia hospitalària](tracabilitat-farmacia.jpg)
+
+*Imatge de Zebra Technologies: identificació de productes en l’operativa de farmàcia.*
+
+## Com calcular el valor i posar en marxa un pilot
+
+El pressupost ha d’incloure equips, bases, bateries, consumibles, integració, llicències, formació, manteniment i dedicació interna. El preu del lector és només una part del cost total.
+
+Proposem un **pilot acotat a un circuit i amb criteris d’acceptació pactats**. Qualitat i els responsables clínics han de validar els controls assistencials; operacions i sistemes, la usabilitat i la continuïtat. Abans i després, convé mesurar:
+
+| Indicador | Criteri de mesura proposat |
+| --- | --- |
+| Incidències d’identificació | Casos per cada 1.000 operacions, mantenint el mateix criteri de notificació |
+| Qualitat de lectura | Percentatge de lectures correctes al primer intent |
+| Mostres | Rebutjos per identificació i repeticions associades, sobre el total de mostres |
+| Equips | Temps de cerca i percentatge d’actius amb estat actualitzat |
+| Existències | Diferències d’inventari i valor de material caducat durant el període |
+| Adopció | Operacions amb lectura sobre les operacions elegibles i motius d’excepció |
+
+Un augment inicial d’incidències notificades també pot reflectir una detecció millor. Cal interpretar les dades amb els equips, no penalitzar la notificació.
+
+Per estimar temps alliberat, es poden multiplicar les operacions anuals pels segons estalviats per operació i dividir el resultat entre 3.600. **Aquest temps no equival automàticament a un estalvi econòmic:** cal concretar com es reassigna i separar-lo dels estalvis verificables en consumibles, repeticions o compres.
+
+## Preguntes freqüents dels responsables de gestió sanitària
+
+### Cal substituir el sistema d’informació de l’hospital?
+
+No necessàriament. Primer s’ha d’analitzar si les aplicacions existents admeten els intercanvis i les validacions necessaris. La integració s’ha d’incloure en l’abast i provar abans d’ampliar el desplegament.
+
+### Es pot començar sense RFID?
+
+Sí. Un circuit amb codis de barres pot ser un primer pas quan es vol registrar qui fa una operació, sobre quin element i en quin moment. La RFID s’ha de justificar amb una necessitat específica.
+
+### Quin termini i quin retorn tindrà el projecte?
+
+Depenen del circuit, les integracions i les condicions de partida. Un proveïdor hauria de detallar dependències, costos recurrents i criteris de mesura abans de comprometre terminis o percentatges de millora.
+
+### Qui ha de participar en la decisió?
+
+El servei implicat, infermeria o responsables assistencials, qualitat, sistemes, compres i logística, amb seguretat i protecció de dades quan correspongui. Cal un responsable del procés i un interlocutor tècnic.
+
+## Com pot ajudar S-IE al teu centre sanitari?
+
+A S-IE podem ajudar-te a valorar **impressió de polseres i etiquetes, lectura de codis, terminals mòbils i identificació RFID**, així com els requisits de consumibles, configuració i integració que s’han de concretar amb els responsables del centre i els proveïdors de les aplicacions.
+
+Per iniciar la conversa, explica’ns quin circuit vols millorar, quantes operacions es fan, quines incidències es repeteixen i amb quins sistemes treballeu. Amb aquesta informació es pot definir una prova i uns objectius mesurables.
+
+[Consulta les solucions de captura de dades de S-IE](/hardware/captura-de-dades), les [opcions d’impressió](/hardware/impressio) o [contacta per valorar un projecte d’identificació sanitària](/contacte).
+
+També et pot interessar la nostra guia sobre [etiquetatge farmacèutic i traçabilitat](/normativa/etiquetatge-farmaceutic-normativa-bartender-loftware).
+
+*Article elaborat amb fonts de Zebra Technologies, l’OMS i GS1, enllaçades als apartats corresponents. Els criteris d’implantació i els indicadors són una proposta de treball de S-IE; els circuits assistencials s’han de validar amb els responsables del centre.*
+
+*Fotografies: Zebra Technologies.*

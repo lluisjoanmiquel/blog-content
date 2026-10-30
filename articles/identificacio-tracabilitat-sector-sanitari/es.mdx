@@ -1,0 +1,128 @@
+---
+title: "Identificación y trazabilidad sanitaria: guía para hospitales"
+description: "Cómo mejorar la identificación de pacientes, muestras y equipos. Guía para gestores sanitarios sobre códigos de barras, RFID, integración e indicadores."
+category: guies
+slug: identificacion-trazabilidad-sanitaria-hospitales
+date: 2026-10-30
+author: Equip S-IE
+cover: portada-sanitat.jpg
+draft: false
+---
+
+Una muestra que llega al laboratorio con una identificación dudosa. Una bomba de infusión que figura en el inventario pero que nadie localiza. Un profesional que vuelve a introducir datos que ya existen en el sistema. Son situaciones distintas, pero comparten una necesidad: **vincular de forma fiable cada persona, producto y equipo con la información y el proceso que le corresponden**.
+
+Los **sistemas de identificación y trazabilidad sanitaria** pueden ayudar a establecer esa conexión mediante pulseras, etiquetas, códigos de barras, terminales móviles y RFID. El resultado depende de cómo se integren con el trabajo asistencial y con los sistemas de información del centro.
+
+Esta guía se dirige a dirección, enfermería, calidad, logística, compras y sistemas de información de hospitales, clínicas y otros centros sanitarios. Propone criterios para decidir **por dónde empezar, qué exigir a una solución y cómo comprobar si aporta valor**.
+
+## ¿Qué problemas de gestión puede ayudar a resolver la identificación automática?
+
+Antes de elegir dispositivos, conviene relacionar cada necesidad con un proceso y un responsable.
+
+| Ámbito | Necesidad que resolver | Aplicación posible | Qué debería comprobar la dirección |
+| --- | --- | --- | --- |
+| Admisión y hospitalización | Coherencia entre persona, episodio y registro | Pulsera identificativa vinculada al sistema del centro | Cómo se corrigen los datos y se controla la reimpresión |
+| Laboratorio | Mantener la identidad de cada muestra | Lectura de pulsera y etiqueta generada en el punto de recogida | Cómo se gestionan incidencias, rechazos y nuevas extracciones |
+| Medicación | Asociar la actuación con el paciente y la prescripción | Lectura de paciente y medicamento integrada con la aplicación clínica | Qué comprobaciones realiza el software y quién resuelve las alertas |
+| Almacén y farmacia | Conocer existencias, lotes y caducidades | Lectura de códigos en recepción, dispensación y consumo | Si el registro actualiza realmente el stock y permite gestionar retiradas |
+| Equipamiento | Encontrar equipos y conocer su estado | Identificación de activos y, cuando proceda, infraestructura de localización | Precisión necesaria y distinción entre disponible, en uso y pendiente de limpieza |
+| Esterilización | Relacionar material con los registros de su circuito | Identificación de instrumentos, contenedores o lotes | Resistencia del marcado e integración con la validación del proceso |
+
+La prioridad será distinta en un hospital con incidencias de etiquetado que en una clínica que dedica demasiado tiempo a buscar equipamiento. **Un proyecto útil empieza con un problema concreto y un dato de partida.**
+
+## Identificación del paciente: una pulsera debe formar parte de un procedimiento
+
+La [recomendación de la OMS sobre identificación de pacientes](https://www.who.int/docs/default-source/integrated-health-services-%28ihs%29/psf/patient-safety-solutions/ps-solution2-patient-identification.pdf) plantea comprobar al menos dos identificadores, como el nombre y la fecha de nacimiento; el número de habitación no debe ser uno de ellos. También destaca la formación y la gestión de situaciones especiales.
+
+La pulsera y la lectura del código pueden apoyar ese procedimiento. **Escanear una pulsera no garantiza, por sí solo, que los datos sean correctos ni que se haya completado la verificación exigida por el centro.**
+
+Para gestión, las preguntas son concretas: ¿quién valida la identidad al crear el registro? ¿Qué sucede si se detecta un duplicado? ¿Cómo se sustituye una pulsera deteriorada? ¿Qué circuito se aplica si el paciente no puede identificarse por los medios habituales? Las respuestas deben acordarse con los responsables asistenciales antes de desplegar equipos.
+
+## Muestras y medicación: llevar la comprobación al punto de atención
+
+En muestras, la identificación debe mantener la relación entre paciente, petición y recipiente durante todo el circuito. La documentación de [Zebra sobre etiquetado junto al paciente](https://medialibrary.zebra.com/content/dam/zebra_new_ia/en-us/solutions-verticals/vertical-solutions/healthcare/white-paper/bedside-specimen-labeling-white-paper-en-us.pdf) describe el uso de lectura de pulsera, consulta de la petición e impresión bajo demanda en el punto de recogida.
+
+Para valorar un piloto, hay que observar qué ocurre cuando se cancela una petición, falla la conexión o una etiqueta no puede leerse. La aplicación debe gestionar estos casos según el protocolo del centro, con un registro de la incidencia y de su resolución.
+
+![Profesional sanitario leyendo el código de una muestra en el punto de atención](identificacio-mostres.jpg)
+
+*Imagen de Zebra Technologies: captura de datos aplicada a la identificación de muestras.*
+
+En medicación, la lectura del paciente y del producto puede alimentar las comprobaciones de la aplicación clínica. El [modelo ilustrativo de GS1 para hospitalización](https://gs1hospital-st.gs1.org/wards/index.php) muestra esa vinculación con el registro asistencial. Es un ejemplo de proceso, que cada centro debe adaptar y validar.
+
+**El lector captura datos; las comprobaciones dependen del software, de la prescripción y de los protocolos configurados.** Una alerta sin un responsable y un procedimiento de respuesta puede acabar generando interrupciones o atajos de trabajo.
+
+## Códigos de barras, GS1 DataMatrix o RFID: ¿qué conviene en cada caso?
+
+Los códigos de barras son adecuados para registrar una acción deliberada: identificar una pulsera, leer un envase o confirmar un movimiento. Hay que probarlos con los tamaños, superficies y condiciones reales del centro.
+
+[GS1 Healthcare recomienda GS1 DataMatrix para la identificación de productos sanitarios](https://support.gs1.org/support/solutions/articles/43000734222/). Este código puede incluir identificador de producto, lote, caducidad y número de serie. La aplicación debe saber interpretar los datos presentes; un QR que solo abre una página web no tiene necesariamente la misma función.
+
+La **RFID** puede resultar interesante para inventarios y controles de paso. Para localizar activos, hay que definir si se necesita conocer la última lectura, una zona o una posición actualizada. Una etiqueta RFID pasiva, por sí sola, no ofrece localización continua: hacen falta lectores, cobertura y software adecuados. Las [soluciones de seguimiento de activos sanitarios de Zebra](https://www.zebra.com/us/en/industry/healthcare/use-case/healthcare-asset-tracking.html) se orientan a esa necesidad de visibilidad.
+
+La pregunta de compra es: **¿qué decisión se tomará con el dato capturado y con qué precisión debe estar disponible ese dato?**
+
+## Integración, consumibles y continuidad: ¿qué exigir al proyecto?
+
+La propuesta de [Zebra para hospitales y sistemas sanitarios](https://www.zebra.com/es/es/industry/healthcare/sub-vertical/hospitals-and-health-systems.html) combina identificación, impresión y movilidad. Para convertir estas piezas en una solución operativa, recomendamos revisar cinco aspectos:
+
+1. **Sistemas de origen.** Identificar dónde residen los pacientes y episodios, las peticiones de laboratorio, las prescripciones, el stock y los activos. Acordar los intercambios con los proveedores del sistema hospitalario, el laboratorio y el ERP.
+2. **Datos y permisos.** Definir qué contiene cada código, qué se consulta en el servidor, quién accede y qué queda registrado. Validar el diseño con sistemas, seguridad y protección de datos.
+3. **Uso real.** Probar lectura con guantes, ergonomía, autonomía por turno, carga, ruido y cobertura. Los modelos sanitarios pueden incorporar materiales preparados para la limpieza, pero hay que seguir las [compatibilidades e instrucciones del fabricante](https://www.zebra.com/us/en/products/printers/healthcare-printers.html) para cada equipo.
+4. **Pulseras y etiquetas.** Ensayar legibilidad, fijación y resistencia durante el tiempo y las condiciones de uso previstos: roce, humedad, refrigeración o procesos específicos. Una etiqueta de oficina no debe darse por adecuada para cualquier circuito clínico.
+5. **Continuidad.** Establecer qué se hace cuando fallan red, impresora o terminal; qué recambios hay y cómo se concilian los registros después de una incidencia.
+
+![Lectura de códigos de barras en un entorno de farmacia hospitalaria](tracabilitat-farmacia.jpg)
+
+*Imagen de Zebra Technologies: identificación de productos en la operativa de farmacia.*
+
+## Cómo calcular el valor y poner en marcha un piloto
+
+El presupuesto debe incluir equipos, bases, baterías, consumibles, integración, licencias, formación, mantenimiento y dedicación interna. El precio del lector es solo una parte del coste total.
+
+Proponemos un **piloto acotado a un circuito y con criterios de aceptación pactados**. Calidad y los responsables clínicos deben validar los controles asistenciales; operaciones y sistemas, la usabilidad y la continuidad. Antes y después, conviene medir:
+
+| Indicador | Criterio de medición propuesto |
+| --- | --- |
+| Incidencias de identificación | Casos por cada 1.000 operaciones, manteniendo el mismo criterio de notificación |
+| Calidad de lectura | Porcentaje de lecturas correctas al primer intento |
+| Muestras | Rechazos por identificación y repeticiones asociadas, sobre el total de muestras |
+| Equipos | Tiempo de búsqueda y porcentaje de activos con estado actualizado |
+| Existencias | Diferencias de inventario y valor de material caducado durante el periodo |
+| Adopción | Operaciones con lectura sobre las operaciones elegibles y motivos de excepción |
+
+Un aumento inicial de incidencias notificadas también puede reflejar una mejor detección. Hay que interpretar los datos con los equipos, sin penalizar la notificación.
+
+Para estimar tiempo liberado, se pueden multiplicar las operaciones anuales por los segundos ahorrados por operación y dividir el resultado entre 3.600. **Ese tiempo no equivale automáticamente a un ahorro económico:** hay que concretar cómo se reasigna y separarlo de los ahorros verificables en consumibles, repeticiones o compras.
+
+## Preguntas frecuentes de los responsables de gestión sanitaria
+
+### ¿Hay que sustituir el sistema de información del hospital?
+
+No necesariamente. Primero debe analizarse si las aplicaciones existentes admiten los intercambios y las validaciones necesarios. La integración debe incluirse en el alcance y probarse antes de ampliar el despliegue.
+
+### ¿Se puede empezar sin RFID?
+
+Sí. Un circuito con códigos de barras puede ser un primer paso cuando se quiere registrar quién realiza una operación, sobre qué elemento y en qué momento. La RFID debe justificarse con una necesidad específica.
+
+### ¿Qué plazo y qué retorno tendrá el proyecto?
+
+Dependen del circuito, las integraciones y las condiciones de partida. Un proveedor debería detallar dependencias, costes recurrentes y criterios de medición antes de comprometer plazos o porcentajes de mejora.
+
+### ¿Quién debe participar en la decisión?
+
+El servicio implicado, enfermería o responsables asistenciales, calidad, sistemas, compras y logística, con seguridad y protección de datos cuando corresponda. Hace falta un responsable del proceso y un interlocutor técnico.
+
+## ¿Cómo puede ayudar S-IE a tu centro sanitario?
+
+En S-IE podemos ayudarte a valorar **impresión de pulseras y etiquetas, lectura de códigos, terminales móviles e identificación RFID**, así como los requisitos de consumibles, configuración e integración que deben concretarse con los responsables del centro y los proveedores de las aplicaciones.
+
+Para iniciar la conversación, explícanos qué circuito quieres mejorar, cuántas operaciones se realizan, qué incidencias se repiten y con qué sistemas trabajáis. Con esa información se puede definir una prueba y unos objetivos medibles.
+
+[Consulta las soluciones de captura de datos de S-IE](/es/hardware/captura-de-datos), las [opciones de impresión](/es/hardware/impresion) o [contacta para valorar un proyecto de identificación sanitaria](/es/contacto).
+
+También puede interesarte nuestra guía sobre [etiquetado farmacéutico y trazabilidad](/es/normativa/etiquetado-farmaceutico-normativa-bartender-loftware).
+
+*Artículo elaborado con fuentes de Zebra Technologies, la OMS y GS1, enlazadas en los apartados correspondientes. Los criterios de implantación y los indicadores son una propuesta de trabajo de S-IE; los circuitos asistenciales deben validarse con los responsables del centro.*
+
+*Fotografías: Zebra Technologies.*
