@@ -1,0 +1,113 @@
+---
+title: "Lectura automática y visión artificial: soluciones S-IE para producción y logística"
+description: "S-IE plantea soluciones de lectura automática y visión artificial con tecnología Zebra para verificar etiquetas y mejorar la trazabilidad industrial."
+category: guies
+slug: lectura-automatica-vision-artificial-produccion-logistica
+date: 2026-11-02
+author: Equipo S-IE
+cover: portada-visio-industrial.svg
+draft: false
+---
+
+**Una caja avanza por la cinta: el sistema lee el código, comprueba que corresponde a la orden de trabajo y registra el resultado.** Si no se puede identificar o la información no coincide, genera una incidencia antes de que continúe el proceso.
+
+Este es un ejemplo de lo que podemos plantear en S-IE combinando **lectura fija industrial, visión artificial e integración con los sistemas de la empresa**. Partimos del punto que se quiere controlar: identificar una pieza, comprobar una etiqueta o validar una expedición. Después definimos los equipos y la lógica que deben convertir esa captura en una acción útil.
+
+La tecnología de Zebra ofrece distintas bases para estos proyectos, con lectores industriales fijos, cámaras y herramientas de software de la familia Aurora.
+
+## Leer un código e inspeccionar un producto: dos necesidades diferentes
+
+Un **lector fijo industrial** captura códigos de barras o códigos bidimensionales, como Data Matrix y QR, en un punto definido del proceso. Permite automatizar lecturas que hoy pueden requerir una intervención manual.
+
+La **visión artificial** analiza imágenes para comprobar características configuradas: la presencia de un elemento, una posición o la correspondencia con un patrón, según el equipo y las herramientas seleccionadas.
+
+Pueden trabajar conjuntamente. Leer el código de una etiqueta permite identificar el producto; una inspección adicional puede comprobar si la etiqueta está presente y si su posición queda dentro de los márgenes previstos.
+
+**Una lectura correcta tampoco garantiza que los datos sean los esperados.** Para comprobarlo, hay que compararlos con la orden, la referencia o la regla definida en el sistema.
+
+## ¿Qué soluciones podemos plantear desde S-IE?
+
+Los siguientes casos son propuestas de configuración. El alcance debe concretarse con muestras, pruebas y las condiciones reales de cada instalación.
+
+### Verificar la etiqueta después de imprimirla y aplicarla
+
+En una línea de etiquetado podemos estudiar un control posterior a la impresión o a la aplicación. El sistema captura el código y contrasta los campos acordados con la información esperada.
+
+Por ejemplo, podemos definir comprobaciones de referencia, lote o número de serie y una respuesta para cada resultado: conforme, lectura fallida o dato incorrecto. Si hay que comprobar texto impreso, como un lote o una fecha, se debe valorar una herramienta de reconocimiento de caracteres y validarla con la impresión real.
+
+En S-IE podemos plantear el conjunto desde el origen: **diseño de etiqueta, material, ribbon, impresora, aplicación y control de lectura**. Una incidencia también puede tener su origen en el contraste, los reflejos, una arruga o la ubicación del código.
+
+### Registrar el paso de productos y cajas en producción
+
+Un punto de lectura a la entrada o a la salida de una operación permite relacionar un identificador con un evento: producto procesado, caja completada o paso por una estación.
+
+Para convertirlo en trazabilidad hay que definir qué se guarda: identificador, fecha y hora, punto de control y resultado. También hay que acordar cómo se tratan las lecturas repetidas, los productos sin código y los reenvíos después de una interrupción.
+
+### Facilitar el embalaje con lectura de manos libres
+
+En una mesa de preparación, un lector fijo puede capturar el código cuando el operario presenta el producto dentro de la zona prevista. Podemos estudiar una validación contra el pedido y una indicación clara para continuar o revisar.
+
+El proyecto debe distinguir entre **identificar una referencia y contar unidades**. Si distintos artículos comparten el mismo código, hace falta una lógica que evite confundir una lectura repetida con una unidad nueva.
+
+### Automatizar la identificación sobre cinta
+
+Cuando las cajas pasan por un transportador, podemos valorar un punto de lectura o una configuración con varios lectores para cubrir las caras necesarias.
+
+La selección depende del tamaño de las cajas, la posición de los códigos, la velocidad, la separación entre paquetes y las condiciones de luz. El objetivo es asociar cada lectura con la caja correcta y prever qué sucede cuando no se puede identificar.
+
+Los túneles de lectura pueden formar parte de una arquitectura más amplia con otras funciones, siempre que se hayan dimensionado e integrado expresamente.
+
+### Controlar expediciones en un muelle de carga
+
+Podemos estudiar puntos de captura que contrasten los identificadores leídos con una expedición prevista. Para que el control sea útil, hay que delimitar la zona y evitar atribuir a una carga los códigos de un palé cercano.
+
+Una lectura de código de barras requiere visibilidad del código. Si se necesita identificar elementos ocultos o leer múltiples etiquetas sin visión directa, conviene valorar también una arquitectura RFID según el material y el entorno.
+
+### Añadir inspecciones visuales de calidad
+
+Cuando la necesidad va más allá de leer códigos, podemos estudiar cámaras de visión para comprobar presencias, posiciones o diferencias respecto a un criterio acordado.
+
+Un ejemplo sería detectar una etiqueta ausente o un componente visible que falta antes de cerrar una caja. La viabilidad depende de lo que se puede ver, de la iluminación y de la variabilidad del producto. Las tolerancias y los criterios de aceptación deben probarse con muestras conformes y defectuosas.
+
+## De la captura a la acción
+
+Una solución completa debe definir qué sucede después de la lectura o de la inspección.
+
+| Resultado | Respuesta que se puede diseñar |
+| --- | --- |
+| Identificador correcto y esperado | Registrar el paso y autorizar la continuación |
+| Código leído pero no esperado | Avisar de la discrepancia y retener la unidad según el proceso |
+| Sin lectura | Solicitar revisión o activar la gestión de incidencias |
+| Inspección visual no conforme | Señalizar, registrar y gestionar la unidad |
+| Comunicación interrumpida | Aplicar el comportamiento de contingencia acordado |
+
+Las órdenes a un PLC, el desvío de un producto o la parada de un equipo requieren integrar y validar las señales con el responsable de la línea.
+
+## Conexión con ERP, SGA y control de producción
+
+En S-IE orientamos el proyecto para que los datos lleguen al lugar donde se necesitan. Podemos valorar la conexión con un **ERP, un SGA/WMS, una aplicación de producción o un PLC**, según las interfaces disponibles.
+
+La familia Zebra Aurora aporta herramientas para configurar lectura e inspección, así como opciones para desarrollar aplicaciones de visión. La elección del software, las licencias y el hardware dependerá de la función concreta. La conexión con un sistema de gestión puede requerir desarrollo y configuración adicionales.
+
+## ¿Cómo abordamos el proyecto?
+
+1. **Definimos el control:** qué queremos identificar o comprobar y qué decisión debe tomarse.
+2. **Recogemos muestras y condiciones:** etiquetas, productos, velocidad, distancias, espacio y entorno.
+3. **Seleccionamos la configuración:** lector o cámara, óptica, iluminación, soporte y señales.
+4. **Acordamos los datos y las excepciones:** formatos, comparaciones, duplicados, incidencias y comunicaciones.
+5. **Realizamos una prueba piloto:** con variaciones reales y casos difíciles, antes de validar la instalación.
+6. **Preparamos la puesta en marcha:** instrucciones, formación y mantenimiento acordado.
+
+Los indicadores de la prueba pueden incluir porcentaje de lecturas válidas, falsos rechazos, unidades no conformes no detectadas y tiempo de respuesta. Los objetivos deben acordarse para el proceso concreto.
+
+## ¿Quieres automatizar un punto de control?
+
+Cuéntanos **qué pasa por la línea, qué código o detalle debe comprobarse y qué debe hacer el sistema cuando detecta una incidencia**. En S-IE te ayudamos a definir una propuesta que conecte identificación, etiquetado y datos de producción.
+
+[Hablemos de tu proyecto de lectura automática y visión artificial](/es/contacto).
+
+### Información relacionada
+
+- [Impresión autónoma de etiquetas: soluciones S-IE con SATO AEP](/es/guias/impresion-autonoma-etiquetas-sato-aep)
+- [Configura las etiquetas para tu proceso](https://etiquetes.s-ie.cat/)
+- Documentación del fabricante: [lectores fijos industriales Zebra](https://www.zebra.com/us/en/products/industrial-machine-vision-fixed-scanners/fixed-industrial-barcode-scanners.html), [soluciones de visión artificial](https://www.zebra.com/us/en/products/industrial-machine-vision-fixed-scanners/machine-vision-solutions.html) y [Zebra Aurora Focus](https://www.zebra.com/us/en/software/machine-vision-and-fixed-industrial-scanning-software/aurora-focus.html).
