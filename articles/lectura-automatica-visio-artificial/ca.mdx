@@ -1,0 +1,113 @@
+---
+title: "Lectura automàtica i visió artificial: solucions S-IE per a producció i logística"
+description: "S-IE planteja solucions de lectura automàtica i visió artificial amb tecnologia Zebra per verificar etiquetes i millorar la traçabilitat industrial."
+category: guies
+slug: lectura-automatica-visio-artificial-produccio-logistica
+date: 2026-11-02
+author: Equip S-IE
+cover: portada-visio-industrial.svg
+draft: true
+---
+
+**Una caixa avança per la cinta: el sistema llegeix el codi, comprova que correspon a l’ordre de treball i registra el resultat.** Si no es pot identificar o la informació no coincideix, genera una incidència abans que continuï el procés.
+
+Aquest és un exemple del que podem plantejar a S-IE combinant **lectura fixa industrial, visió artificial i integració amb els sistemes de l’empresa**. Partim del punt que es vol controlar: identificar una peça, comprovar una etiqueta o validar una expedició. Després definim els equips i la lògica que han de convertir aquesta captura en una acció útil.
+
+La tecnologia de Zebra ofereix diferents bases per a aquests projectes, amb lectors industrials fixos, càmeres i eines de programari de la família Aurora.
+
+## Llegir un codi i inspeccionar un producte: dues necessitats diferents
+
+Un **lector fix industrial** captura codis de barres o codis bidimensionals, com Data Matrix i QR, en un punt definit del procés. Permet automatitzar lectures que avui poden requerir una intervenció manual.
+
+La **visió artificial** analitza imatges per comprovar característiques configurades: la presència d’un element, una posició o la correspondència amb un patró, segons l’equip i les eines seleccionades.
+
+Poden treballar conjuntament. Llegir el codi d’una etiqueta permet identificar el producte; una inspecció addicional pot comprovar si l’etiqueta és present i si la seva posició queda dins dels marges previstos.
+
+**Una lectura correcta tampoc garanteix que les dades siguin les esperades.** Per comprovar-ho, cal comparar-les amb l’ordre, la referència o la regla definida al sistema.
+
+## Quines solucions podem plantejar des de S-IE?
+
+Els casos següents són propostes de configuració. L’abast s’ha de concretar amb mostres, proves i les condicions reals de cada instal·lació.
+
+### Verificar l’etiqueta després d’imprimir-la i aplicar-la
+
+En una línia d’etiquetatge podem estudiar un control posterior a la impressió o a l’aplicació. El sistema captura el codi i contrasta els camps acordats amb la informació esperada.
+
+Per exemple, podem definir comprovacions de referència, lot o número de sèrie i una resposta per a cada resultat: conforme, lectura fallida o dada incorrecta. Si cal comprovar text imprès, com un lot o una data, s’ha de valorar una eina de reconeixement de caràcters i validar-la amb la impressió real.
+
+A S-IE podem plantejar el conjunt des de l’origen: **disseny d’etiqueta, material, ribbon, impressora, aplicació i control de lectura**. Una incidència també pot tenir l’origen en el contrast, els reflexos, una arruga o la ubicació del codi.
+
+### Registrar el pas de productes i caixes a producció
+
+Un punt de lectura a l’entrada o a la sortida d’una operació permet relacionar un identificador amb un esdeveniment: producte processat, caixa completada o pas per una estació.
+
+Per convertir-ho en traçabilitat cal definir què es desa: identificador, data i hora, punt de control i resultat. També cal acordar com es tracten les lectures repetides, els productes sense codi i els reenviaments després d’una interrupció.
+
+### Facilitar l’embalatge amb lectura de mans lliures
+
+En una taula de preparació, un lector fix pot capturar el codi quan l’operari presenta el producte dins de la zona prevista. Podem estudiar una validació contra la comanda i una indicació clara per continuar o revisar.
+
+El projecte ha de distingir entre **identificar una referència i comptar unitats**. Si diferents articles comparteixen el mateix codi, cal una lògica que eviti confondre una lectura repetida amb una unitat nova.
+
+### Automatitzar la identificació sobre cinta
+
+Quan les caixes passen per un transportador, podem valorar un punt de lectura o una configuració amb diversos lectors per cobrir les cares necessàries.
+
+La selecció depèn de la mida de les caixes, la posició dels codis, la velocitat, la separació entre paquets i les condicions de llum. L’objectiu és associar cada lectura amb la caixa correcta i preveure què passa quan no es pot identificar.
+
+Els túnels de lectura poden formar part d’una arquitectura més àmplia amb altres funcions, sempre que s’hagin dimensionat i integrat expressament.
+
+### Controlar expedicions en un moll de càrrega
+
+Podem estudiar punts de captura que contrastin els identificadors llegits amb una expedició prevista. Perquè el control sigui útil, cal delimitar la zona i evitar atribuir a una càrrega els codis d’un palet proper.
+
+Una lectura de codi de barres requereix visibilitat del codi. Si es necessita identificar elements ocults o llegir múltiples etiquetes sense visió directa, convé valorar també una arquitectura RFID segons el material i l’entorn.
+
+### Afegir inspeccions visuals de qualitat
+
+Quan la necessitat va més enllà de llegir codis, podem estudiar càmeres de visió per comprovar presències, posicions o diferències respecte d’un criteri acordat.
+
+Un exemple seria detectar una etiqueta absent o un component visible que falta abans de tancar una caixa. La viabilitat depèn de què es pot veure, de la il·luminació i de la variabilitat del producte. Les toleràncies i els criteris d’acceptació s’han de provar amb mostres conformes i defectuoses.
+
+## De la captura a l’acció
+
+Una solució completa ha de definir què passa després de la lectura o de la inspecció.
+
+| Resultat | Resposta que es pot dissenyar |
+| --- | --- |
+| Identificador correcte i esperat | Registrar el pas i autoritzar la continuació |
+| Codi llegit però no esperat | Avisar de la discrepància i retenir la unitat segons el procés |
+| Sense lectura | Demanar revisió o activar la gestió d’incidències |
+| Inspecció visual no conforme | Senyalitzar, registrar i gestionar la unitat |
+| Comunicació interrompuda | Aplicar el comportament de contingència acordat |
+
+Les ordres a un PLC, la desviació d’un producte o l’aturada d’un equip requereixen integrar i validar els senyals amb el responsable de la línia.
+
+## Connexió amb ERP, SGA i control de producció
+
+A S-IE orientem el projecte perquè les dades arribin al lloc on es necessiten. Podem valorar la connexió amb un **ERP, un SGA/WMS, una aplicació de producció o un PLC**, segons les interfícies disponibles.
+
+La família Zebra Aurora aporta eines per configurar lectura i inspecció, així com opcions per desenvolupar aplicacions de visió. L’elecció del programari, les llicències i el maquinari dependrà de la funció concreta. La connexió amb un sistema de gestió pot requerir desenvolupament i configuració addicionals.
+
+## Com abordem el projecte?
+
+1. **Definim el control:** què volem identificar o comprovar i quina decisió s’ha de prendre.
+2. **Recollim mostres i condicions:** etiquetes, productes, velocitat, distàncies, espai i entorn.
+3. **Seleccionem la configuració:** lector o càmera, òptica, il·luminació, suport i senyals.
+4. **Acordem les dades i les excepcions:** formats, comparacions, duplicats, incidències i comunicacions.
+5. **Fem una prova pilot:** amb variacions reals i casos difícils, abans de validar la instal·lació.
+6. **Preparem la posada en marxa:** instruccions, formació i manteniment acordat.
+
+Els indicadors de la prova poden incloure percentatge de lectures vàlides, falsos rebutjos, unitats no conformes no detectades i temps de resposta. Els objectius s’han d’acordar per al procés concret.
+
+## Vols automatitzar un punt de control?
+
+Explica’ns **què passa per la línia, quin codi o detall s’ha de comprovar i què ha de fer el sistema quan detecta una incidència**. A S-IE t’ajudem a definir una proposta que connecti identificació, etiquetatge i dades de producció.
+
+[Parlem del teu projecte de lectura automàtica i visió artificial](/contacte).
+
+### Informació relacionada
+
+- [Impressió autònoma d’etiquetes: solucions S-IE amb SATO AEP](/guies/impressio-autonoma-etiquetes-sato-aep)
+- [Configura les etiquetes per al teu procés](https://etiquetes.s-ie.cat/)
+- Documentació del fabricant: [lectors fixos industrials Zebra](https://www.zebra.com/us/en/products/industrial-machine-vision-fixed-scanners/fixed-industrial-barcode-scanners.html), [solucions de visió artificial](https://www.zebra.com/us/en/products/industrial-machine-vision-fixed-scanners/machine-vision-solutions.html) i [Zebra Aurora Focus](https://www.zebra.com/us/en/software/machine-vision-and-fixed-industrial-scanning-software/aurora-focus.html).
