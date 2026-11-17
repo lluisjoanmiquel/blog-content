@@ -1,0 +1,120 @@
+---
+title: "Lectura industrial Zebra: del codi de barres al control del procés"
+description: "Descobreix com els lectors industrials Zebra, Aurora Focus i l’OCR automatitzen la identificació de peces, caixes i expedicions amb S-IE."
+category: actualitat
+slug: zebra-lectura-industrial-codis-tracabilitat
+date: 2026-11-17
+author: Equip S-IE
+cover: zebra-fs80.jpg
+draft: false
+---
+
+Una caixa surt de la línia amb una etiqueta perfectament llegible. Però és l’etiqueta que li correspon? El lot coincideix amb l’ordre de fabricació? S’ha registrat el seu pas abans d’enviar-la al client?
+
+**Automatitzar la lectura industrial permet convertir cada identificador en un punt de control del procés.** La gamma de lectors fixos Zebra ofereix diferents maneres de capturar codis sense haver d’agafar un lector manual: en una taula d’embalatge, sobre un transportador o des de diverses cares d’un paquet.
+
+A S-IE plantegem aquests projectes connectant **etiquetatge, captura de dades i sistemes de gestió**. El lector aporta la identificació; la integració determina què cal comprovar, on es registra el resultat i com es resol una incidència.
+
+## Què aporta un lector fix industrial?
+
+Un lector fix treballa en una posició definida i captura el codi quan l’article arriba a la zona de lectura. Segons l’aplicació, la captura es pot activar per un senyal de la línia o amb el mode de funcionament configurat.
+
+En un lloc d’embalatge, pot deixar les mans lliures a l’operari. En producció, pot registrar el pas d’una peça sense afegir una lectura manual. En expedicions, pot aportar l’identificador necessari per contrastar una caixa amb la comanda prevista.
+
+La millora depèn de dissenyar bé el conjunt: posició del codi, distància, il·luminació, velocitat i comunicacions. **Instal·lar una càmera davant d’una cinta és només una part del projecte.**
+
+## Una gamma per a necessitats diferents
+
+Zebra disposa de models amb diferents opcions d’òptica, il·luminació, processament i connectivitat. Aquesta és una orientació inicial per situar-los; la selecció final depèn de les proves i de la referència concreta.
+
+| Solució | Enfocament | Aplicació que podem valorar |
+| --- | --- | --- |
+| **FS10** | Format compacte i connexió USB a un equip amfitrió | Taules d’embalatge i estacions amb lectura de mans lliures |
+| **FS20** | Lectura fixa amb integració en xarxes de PLC o equips amfitrions | Identificació en punts de producció i transportadors |
+| **FS40** | Opcions de configuració de lectura, llum i connectivitat | Captura industrial amb requeriments més específics |
+| **FS42** | Processament orientat a lectura exigent i aplicacions AI-OCR | Identificació combinada de codis i text imprès |
+| **FS70** | Òptiques externes amb muntura C i il·luminació seleccionable | Geometries i condicions d’imatge que requereixen una configuració a mida |
+| **FS80** | Alta resolució, cobertura àmplia i lectura a distància | Traçabilitat logística, paquets i configuracions de lectura de més cobertura |
+| **GS20** | Passarel·la de coordinació i agregació de dades de diversos lectors | Túnels de lectura que han d’enviar un resultat coherent al sistema de control |
+
+La imatge de portada mostra un **Zebra FS80**. El GS20 és una passarel·la de connectivitat, amb suport per a fins a 16 càmeres compatibles; no substitueix els lectors que capturen els codis.
+
+## De la taula d’embalatge a la lectura sobre cinta
+
+### Preparació de comandes amb les mans lliures
+
+Un operari presenta l’article dins de la zona de lectura i el sistema captura la referència. L’aplicació pot contrastar-la amb la comanda i indicar si es pot continuar. El FS10 permet estudiar aquest punt de partida amb una connexió USB a l’equip de treball.
+
+Cal definir què representa cada captura. Si totes les unitats comparteixen el mateix codi, una segona lectura pot ser una unitat nova o la mateixa peça que continua davant del lector. El recompte necessita una lògica acordada i provada.
+
+### Control després d’imprimir i aplicar una etiqueta
+
+Un lector després de l’aplicador pot comprovar que el codi es llegeix i enviar-ne el contingut al sistema. La integració pot comparar referència, lot o sèrie amb l’ordre en curs i generar una resposta quan hi ha una discrepància.
+
+Aquesta aplicació connecta directament amb l’especialitat de S-IE: **material de l’etiqueta, adhesiu, ribbon, impressora, aplicació i lectura final**. Un reflex, una arruga o un contrast insuficient també poden afectar la captura.
+
+### Traçabilitat de peces i treball en curs
+
+Registrar un identificador a cada estació permet construir l’historial d’una peça o d’un conjunt. Si el codi està marcat directament sobre la peça —DPM—, cal estudiar el material, el tipus de marcatge, la llum i el paquet de descodificació adequat.
+
+El registre útil inclou context: quin identificador ha passat, per quina estació, en quin moment i amb quin resultat. La lectura per si sola no crea aquest historial.
+
+### Paquets amb etiquetes en cares diferents
+
+Quan la posició de l’etiqueta varia, podem estudiar diversos punts de vista o un túnel de lectura. L’arquitectura ha d’associar els codis al paquet correcte i gestionar duplicats, separació entre caixes i lectures fallides. En configuracions compatibles, el GS20 permet concentrar les dades de diversos lectors.
+
+## Codis 1D, 2D i text: què estem llegint?
+
+Els codis lineals, com Code 128, i els bidimensionals, com Data Matrix o QR, transporten dades codificades. L’**OCR** reconeix caràcters impresos, com un lot o una data, quan aquesta informació s’ha de capturar com a text.
+
+L’AI-OCR pot ajudar en aplicacions amb variacions d’impressió, però cal validar-lo amb mostres representatives: tipus de lletra, contrast, fons, reflexos i moviment. Les eines disponibles depenen del model, el firmware i les llicències; no s’han de donar per incloses en qualsevol equip.
+
+També convé distingir tres controls:
+
+- **Llegibilitat:** el sistema aconsegueix descodificar el codi.
+- **Correspondència:** les dades coincideixen amb les esperades per a aquella unitat o ordre.
+- **Qualitat normalitzada del símbol:** requereix un sistema de verificació adequat i un procediment específic.
+
+Una lectura correcta no acredita, per si sola, un grau de qualitat ISO ni que el producte sigui el previst.
+
+## Aurora Focus: configurar, ajustar i diagnosticar
+
+**Zebra Aurora Focus** és l’entorn de configuració de la gamma compatible de lectors fixos i càmeres intel·ligents. Permet preparar les tasques de captura i disposar d’eines per ajustar i revisar el funcionament.
+
+Entre les funcions de l’entorn hi ha **ImagePerfect+**, per treballar amb diferents ajustos d’adquisició a partir d’un mateix disparador, i **Golden Image Compare**, per facilitar el diagnòstic comparant una imatge amb una referència de configuració. La disponibilitat concreta s’ha de revisar segons equip i versió.
+
+Quan el projecte necessita comprovar presències, posicions o defectes visuals, cal seleccionar les eines de visió corresponents. La lectura de codis, l’OCR i la inspecció visual tenen objectius diferents, encara que es puguin combinar en una mateixa solució.
+
+## La integració fa que la dada serveixi per decidir
+
+Una solució completa ha de concretar la comunicació amb el **PLC, MES, SGA/WMS o ERP**, segons les interfícies disponibles. El lector no s’integra automàticament amb qualsevol programa: pot caldre configurar comunicacions i desenvolupar la connexió.
+
+| Situació | Comportament que cal acordar |
+| --- | --- |
+| Codi correcte i esperat | Registrar el pas i autoritzar la continuació |
+| Codi llegit però incorrecte | Avisar i gestionar la unitat segons el procés |
+| Sense lectura | Separar la incidència per revisar-la o aplicar el procediment previst |
+| Dada repetida | Distingir una captura duplicada d’una nova unitat |
+| Pèrdua de comunicació | Aplicar la contingència definida i controlar la recuperació |
+
+Qualsevol actuació sobre el transportador o un mecanisme de rebuig s’ha de coordinar i validar amb el responsable de l’automatització de la línia.
+
+## Com escollim la configuració a S-IE?
+
+Comencem per mostres reals i una descripció del punt de control: mida mínima del codi, distància, posicions possibles, velocitat, separació entre articles i condicions ambientals. Després definim quines dades s’han d’enviar i quina decisió ha de prendre el sistema.
+
+La prova ha d’incloure casos difícils, canvis de producte i incidències de comunicació. Els criteris d’acceptació poden ser el percentatge de lectures vàlides, el temps de resposta i l’associació correcta entre codi i unitat. **La velocitat d’adquisició d’imatges d’un lector no equival directament a caixes per minut.**
+
+Si vols començar per una estació compacta, consulta la [fitxa tècnica del Zebra FS10](/catalegs/zebra-fs10-fitxa-tecnica). Si necessites un control més ampli, pots ampliar informació a la nostra [guia de lectura automàtica i visió artificial](/guies/lectura-automatica-visio-artificial-produccio-logistica).
+
+**Explica’ns què vols identificar, on s’ha de llegir i què ha de passar després.** A S-IE t’ajudem a valorar la configuració, l’etiquetatge i la integració necessaris per al teu procés.
+
+[Contacta amb S-IE per estudiar el teu punt de lectura industrial](/contacte).
+
+### Documentació del fabricant
+
+- [Gamma oficial de lectors fixos industrials Zebra](https://www.zebra.com/us/en/products/industrial-machine-vision-fixed-scanners/fixed-industrial-barcode-scanners.html)
+- [Zebra Aurora Focus](https://www.zebra.com/ap/en/software/machine-vision-and-fixed-industrial-scanning-software/aurora-focus.html)
+- [Passarel·la GS20: especificacions oficials](https://prod-www.zebra.com/content/dam/zebra_dam/en/spec-sheets/gs20-spec-sheet-en-us.pdf)
+
+Les funcions, opcions i llicències s’han de confirmar per a la referència i la versió de programari seleccionades.

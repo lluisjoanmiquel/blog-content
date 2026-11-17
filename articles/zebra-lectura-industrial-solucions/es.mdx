@@ -1,0 +1,120 @@
+---
+title: "Lectura industrial Zebra: del código de barras al control del proceso"
+description: "Descubre cómo los lectores industriales Zebra, Aurora Focus y el OCR automatizan la identificación de piezas, cajas y expediciones con S-IE."
+category: actualitat
+slug: zebra-lectura-industrial-codigos-trazabilidad
+date: 2026-11-17
+author: Equipo S-IE
+cover: zebra-fs80.jpg
+draft: false
+---
+
+Una caja sale de la línea con una etiqueta perfectamente legible. Pero ¿es la etiqueta que le corresponde? ¿El lote coincide con la orden de fabricación? ¿Se ha registrado su paso antes de enviarla al cliente?
+
+**Automatizar la lectura industrial permite convertir cada identificador en un punto de control del proceso.** La gama de lectores fijos Zebra ofrece distintas formas de capturar códigos sin tener que coger un lector manual: en una mesa de embalaje, sobre un transportador o desde varias caras de un paquete.
+
+En S-IE planteamos estos proyectos conectando **etiquetado, captura de datos y sistemas de gestión**. El lector aporta la identificación; la integración determina qué hay que comprobar, dónde se registra el resultado y cómo se resuelve una incidencia.
+
+## ¿Qué aporta un lector fijo industrial?
+
+Un lector fijo trabaja en una posición definida y captura el código cuando el artículo llega a la zona de lectura. Según la aplicación, la captura puede activarse mediante una señal de la línea o con el modo de funcionamiento configurado.
+
+En un puesto de embalaje, puede dejar las manos libres al operario. En producción, puede registrar el paso de una pieza sin añadir una lectura manual. En expediciones, puede aportar el identificador necesario para contrastar una caja con el pedido previsto.
+
+La mejora depende de diseñar bien el conjunto: posición del código, distancia, iluminación, velocidad y comunicaciones. **Instalar una cámara delante de una cinta es solo una parte del proyecto.**
+
+## Una gama para necesidades diferentes
+
+Zebra dispone de modelos con distintas opciones de óptica, iluminación, procesamiento y conectividad. Esta es una orientación inicial para situarlos; la selección final depende de las pruebas y de la referencia concreta.
+
+| Solución | Enfoque | Aplicación que podemos valorar |
+| --- | --- | --- |
+| **FS10** | Formato compacto y conexión USB a un equipo anfitrión | Mesas de embalaje y estaciones con lectura de manos libres |
+| **FS20** | Lectura fija con integración en redes de PLC o equipos anfitriones | Identificación en puntos de producción y transportadores |
+| **FS40** | Opciones de configuración de lectura, luz y conectividad | Captura industrial con requisitos más específicos |
+| **FS42** | Procesamiento orientado a lectura exigente y aplicaciones AI-OCR | Identificación combinada de códigos y texto impreso |
+| **FS70** | Ópticas externas con montura C e iluminación seleccionable | Geometrías y condiciones de imagen que requieren una configuración a medida |
+| **FS80** | Alta resolución, cobertura amplia y lectura a distancia | Trazabilidad logística, paquetes y configuraciones de lectura de mayor cobertura |
+| **GS20** | Pasarela de coordinación y agregación de datos de varios lectores | Túneles de lectura que deben enviar un resultado coherente al sistema de control |
+
+La imagen de portada muestra un **Zebra FS80**. El GS20 es una pasarela de conectividad, con soporte para hasta 16 cámaras compatibles; no sustituye a los lectores que capturan los códigos.
+
+## De la mesa de embalaje a la lectura sobre cinta
+
+### Preparación de pedidos con las manos libres
+
+Un operario presenta el artículo dentro de la zona de lectura y el sistema captura la referencia. La aplicación puede contrastarla con el pedido e indicar si se puede continuar. El FS10 permite estudiar este punto de partida con una conexión USB al equipo de trabajo.
+
+Hay que definir qué representa cada captura. Si todas las unidades comparten el mismo código, una segunda lectura puede ser una unidad nueva o la misma pieza que sigue delante del lector. El recuento necesita una lógica acordada y probada.
+
+### Control después de imprimir y aplicar una etiqueta
+
+Un lector después del aplicador puede comprobar que el código se lee y enviar su contenido al sistema. La integración puede comparar referencia, lote o serie con la orden en curso y generar una respuesta cuando existe una discrepancia.
+
+Esta aplicación conecta directamente con la especialidad de S-IE: **material de la etiqueta, adhesivo, ribbon, impresora, aplicación y lectura final**. Un reflejo, una arruga o un contraste insuficiente también pueden afectar a la captura.
+
+### Trazabilidad de piezas y trabajo en curso
+
+Registrar un identificador en cada estación permite construir el historial de una pieza o de un conjunto. Si el código está marcado directamente sobre la pieza —DPM—, hay que estudiar el material, el tipo de marcado, la luz y el paquete de decodificación adecuado.
+
+El registro útil incluye contexto: qué identificador ha pasado, por qué estación, en qué momento y con qué resultado. La lectura por sí sola no crea ese historial.
+
+### Paquetes con etiquetas en caras diferentes
+
+Cuando la posición de la etiqueta varía, podemos estudiar varios puntos de vista o un túnel de lectura. La arquitectura debe asociar los códigos al paquete correcto y gestionar duplicados, separación entre cajas y lecturas fallidas. En configuraciones compatibles, el GS20 permite concentrar los datos de varios lectores.
+
+## Códigos 1D, 2D y texto: ¿qué estamos leyendo?
+
+Los códigos lineales, como Code 128, y los bidimensionales, como Data Matrix o QR, transportan datos codificados. El **OCR** reconoce caracteres impresos, como un lote o una fecha, cuando esa información debe capturarse como texto.
+
+El AI-OCR puede ayudar en aplicaciones con variaciones de impresión, pero hay que validarlo con muestras representativas: tipografía, contraste, fondo, reflejos y movimiento. Las herramientas disponibles dependen del modelo, el firmware y las licencias; no deben darse por incluidas en cualquier equipo.
+
+También conviene distinguir tres controles:
+
+- **Legibilidad:** el sistema consigue decodificar el código.
+- **Correspondencia:** los datos coinciden con los esperados para esa unidad u orden.
+- **Calidad normalizada del símbolo:** requiere un sistema de verificación adecuado y un procedimiento específico.
+
+Una lectura correcta no acredita, por sí sola, un grado de calidad ISO ni que el producto sea el previsto.
+
+## Aurora Focus: configurar, ajustar y diagnosticar
+
+**Zebra Aurora Focus** es el entorno de configuración de la gama compatible de lectores fijos y cámaras inteligentes. Permite preparar las tareas de captura y disponer de herramientas para ajustar y revisar el funcionamiento.
+
+Entre las funciones del entorno están **ImagePerfect+**, para trabajar con distintos ajustes de adquisición a partir de un mismo disparador, y **Golden Image Compare**, para facilitar el diagnóstico comparando una imagen con una referencia de configuración. La disponibilidad concreta debe revisarse según equipo y versión.
+
+Cuando el proyecto necesita comprobar presencias, posiciones o defectos visuales, hay que seleccionar las herramientas de visión correspondientes. La lectura de códigos, el OCR y la inspección visual tienen objetivos diferentes, aunque puedan combinarse en una misma solución.
+
+## La integración hace que el dato sirva para decidir
+
+Una solución completa debe concretar la comunicación con el **PLC, MES, SGA/WMS o ERP**, según las interfaces disponibles. El lector no se integra automáticamente con cualquier programa: puede ser necesario configurar comunicaciones y desarrollar la conexión.
+
+| Situación | Comportamiento que hay que acordar |
+| --- | --- |
+| Código correcto y esperado | Registrar el paso y autorizar la continuación |
+| Código leído pero incorrecto | Avisar y gestionar la unidad según el proceso |
+| Sin lectura | Separar la incidencia para revisarla o aplicar el procedimiento previsto |
+| Dato repetido | Distinguir una captura duplicada de una unidad nueva |
+| Pérdida de comunicación | Aplicar la contingencia definida y controlar la recuperación |
+
+Cualquier actuación sobre el transportador o un mecanismo de rechazo debe coordinarse y validarse con el responsable de la automatización de la línea.
+
+## ¿Cómo elegimos la configuración en S-IE?
+
+Empezamos por muestras reales y una descripción del punto de control: tamaño mínimo del código, distancia, posiciones posibles, velocidad, separación entre artículos y condiciones ambientales. Después definimos qué datos deben enviarse y qué decisión debe tomar el sistema.
+
+La prueba debe incluir casos difíciles, cambios de producto e incidencias de comunicación. Los criterios de aceptación pueden ser el porcentaje de lecturas válidas, el tiempo de respuesta y la asociación correcta entre código y unidad. **La velocidad de adquisición de imágenes de un lector no equivale directamente a cajas por minuto.**
+
+Si quieres empezar por una estación compacta, consulta la [ficha técnica del Zebra FS10](/es/catalogos/zebra-fs10-ficha-tecnica). Si necesitas un control más amplio, puedes ampliar información en nuestra [guía de lectura automática y visión artificial](/es/guias/lectura-automatica-vision-artificial-produccion-logistica).
+
+**Explícanos qué quieres identificar, dónde debe leerse y qué debe pasar después.** En S-IE te ayudamos a valorar la configuración, el etiquetado y la integración necesarios para tu proceso.
+
+[Contacta con S-IE para estudiar tu punto de lectura industrial](/es/contacto).
+
+### Documentación del fabricante
+
+- [Gama oficial de lectores fijos industriales Zebra](https://www.zebra.com/us/en/products/industrial-machine-vision-fixed-scanners/fixed-industrial-barcode-scanners.html)
+- [Zebra Aurora Focus](https://www.zebra.com/ap/en/software/machine-vision-and-fixed-industrial-scanning-software/aurora-focus.html)
+- [Pasarela GS20: especificaciones oficiales](https://prod-www.zebra.com/content/dam/zebra_dam/en/spec-sheets/gs20-spec-sheet-en-us.pdf)
+
+Las funciones, opciones y licencias deben confirmarse para la referencia y la versión de software seleccionadas.
