@@ -1,0 +1,76 @@
+---
+title: "GS1 Digital Link i Ambition 2027: guia per passar de l’EAN-13 als codis 2D"
+description: "Descobreix què canvia amb Ambition 2027 i com preparar els codis QR GS1 Digital Link, la impressió a la línia i la lectura a caixa."
+category: guies
+slug: gs1-digital-link-codis-2d-2027
+date: 2026-11-18
+author: Equip S-IE
+cover: portada.jpg
+draft: false
+---
+
+Un fabricant d’alimentació ja imprimeix l’EAN-13 a l’envàs i afegeix el lot i la caducitat a la línia. El seu distribuïdor comença a acceptar codis 2D a caixa. Què ha de canviar el fabricant? Pot conservar el mateix identificador de producte i afegir un QR amb GS1 Digital Link. Perquè el projecte funcioni, ha de lligar les dades de producció, l’espai i la qualitat d’impressió de l’envàs i el comportament real de la caixa.
+
+## Què significa el 2027 per a fabricants i distribuïdors?
+
+Ambition 2027, també coneguda com a Sunrise 2027, és una iniciativa voluntària del sector impulsada per GS1. L’objectiu és que, a finals del 2027, els punts de venda al detall puguin llegir codis lineals i codis 2D compatibles amb GS1 i **processar-ne el GTIN**, l’identificador global de l’article comercial.
+
+Durant la transició, un mateix envàs pot portar **l’EAN-13 i un 2D amb el mateix GTIN**. La data del 2027 és una fita de preparació de les caixes. Per decidir quan retirar el codi lineal, cal confirmar l’acceptació del 2D amb els distribuïdors i la resta de socis que llegeixen aquell envàs, també als mercats d’exportació. L’abast de la iniciativa és la unitat que passa per caixa. Les etiquetes logístiques GS1-128 de caixes i palets continuen regint-se pels requisits del seu circuit.
+
+## Quina diferència hi ha entre EAN-13, QR i GS1 DataMatrix?
+
+El **GTIN** és la dada que identifica el producte. L’**EAN-13**, el **QR Code** i el **Data Matrix** són formes de representar dades impreses. **GS1 Digital Link** defineix com expressar identificadors de GS1 dins d’una adreça web. Això permet que un mateix QR es pugui interpretar tant a la caixa com des del mòbil del consumidor.
+
+| Format | Què conté i per a què serveix |
+| --- | --- |
+| EAN-13 | Codifica el GTIN de 13 dígits de l’article. És habitual a caixa i es manté durant la transició. |
+| QR amb GS1 Digital Link | Codifica una adreça web amb el GTIN i, quan cal, altres dades. Una caixa compatible pot extreure’n la identificació i un mòbil pot obrir el contingut web. |
+| GS1 DataMatrix | Codifica el GTIN i altres dades com el lot o la caducitat mitjançant identificadors d’aplicació GS1. Pot encaixar en envasos amb poc espai i en processos de traçabilitat. |
+| Data Matrix amb GS1 Digital Link | Incorpora una adreça web GS1 dins d’un Data Matrix. Convé comprovar la compatibilitat dels dispositius si també es vol utilitzar amb el mòbil. |
+
+Si l’envàs ja porta un QR promocional, cal revisar què codifica. Un enllaç genèric a la marca pot funcionar al mòbil. Perquè serveixi també a caixa com a GS1 Digital Link, l’adreça ha d’incorporar el GTIN amb la sintaxi de GS1 i el sistema del distribuïdor l’ha de poder processar.
+
+## Com funciona un QR GS1 Digital Link?
+
+Una adreça fictícia podria ser aquesta:
+
+`https://id.example.com/01/09520123456788/10/LOT042?17=270630`
+
+| Fragment | Significat |
+| --- | --- |
+| `01/09520123456788` | El GTIN en format de 14 dígits. En aquest exemple correspon a l’EAN-13 `9520123456788`, amb un zero al davant per representar el mateix identificador. |
+| `10/LOT042` | El lot de fabricació. |
+| `17=270630` | La data de caducitat en format AAMMDD, el 30 de juny del 2027. |
+
+A caixa, el sistema pot extreure el GTIN de l’adreça codificada. Amb el mòbil, l’adreça pot dirigir a una fitxa de producte, unes instruccions d’ús o informació de reciclatge. Si la marca manté el domini i l’adreça impresa, pot actualitzar el contingut de destinació sense refer el disseny de l’envàs. La informació que ha de figurar físicament a l’etiqueta continua depenent del producte i del mercat.
+
+## Quan cal imprimir el codi a la línia?
+
+**Si el 2D només conté el GTIN**, el contingut és constant per a aquella referència i es pot incorporar al disseny preimprès. **Si conté el lot, la caducitat o un número de sèrie**, el contingut varia. En el cas del fabricant de l’exemple, el sistema d’etiquetatge pot rebre les dades de l’ordre de fabricació i generar el QR quan s’imprimeix l’etiqueta.
+
+Aquesta decisió afecta la maquinària, el programari i les proves. En un canvi de lot, s’ha de comprovar que el codi de les primeres unitats coincideix amb el lot visible i amb l’ordre activa. Si hi ha una reimpressió, la plantilla ha de recuperar les dades de l’etiqueta que cal reposar. També val la pena fixar què passa si la dada falta o si la línia detecta que el codi imprès correspon a una altra referència.
+
+## Com es comprova la qualitat del codi 2D?
+
+Una lectura amb el mòbil ajuda a comprovar el contingut web. La qualitat d’impressió es mesura amb un verificador de codis 2D, amb la metodologia **ISO/IEC 15415** i els criteris GS1 aplicables al format i a l’ús previst. Reserveu la zona lliure al voltant del símbol, ajusteu la mida del mòdul a la resolució de la impressora i busqueu una ubicació que eviti plecs, soldadures i corbes pronunciades.
+
+Les proves s’han de fer **sobre l’envàs acabat i a velocitat de producció**. Un film brillant, la condensació d’un refrigerat o una etiqueta sobre una ampolla corba poden canviar el resultat. En un projecte de línia, es pot combinar la lectura automàtica per detectar etiquetes incorrectes amb la verificació periòdica de mostres per mesurar la qualitat del símbol. Trobaràs més criteris d’implantació a la nostra [guia de bones pràctiques d’etiquetatge GS1](/guies/etiquetatge-gs1-bones-practiques).
+
+## Què s’ha de provar al punt de venda?
+
+- **Identificació.** Amb l’EAN-13 i amb el 2D, la caixa recupera el mateix GTIN i troba la referència correcta al catàleg.
+- **Doble marcatge.** Quan el lector veu tots dos codis a la vegada, la caixa registra una sola unitat.
+- **Compatibilitat.** El lector de tipus imatge, el seu microprogramari i el programari de caixa estan configurats per interpretar el format triat. Cal provar els models i versions que fan servir les botigues.
+- **Dades addicionals.** Si el distribuïdor vol bloquejar la venda d’un producte caducat o retirar un lot concret, cal que el seu sistema processi aquests camps i executi la regla. Llegir el GTIN és la fita mínima del 2027.
+
+## Com començar amb un pilot
+
+Trieu una referència representativa, una línia de producció i un distribuïdor amb qui pugueu provar. Acordeu el format 2D, les dades que voleu codificar i els criteris d’acceptació. Imprimiu mostres de diversos lots i comproveu els canvis de referència i les reimpressions. Porteu els mateixos envasos a una caixa real i, si feu servir Digital Link, reviseu també què obre el mòbil.
+
+A S-IE podem revisar amb vosaltres el disseny de l’etiqueta, la impressora i els consumibles, la integració de dades i els lectors de producció o magatzem. Si ja teniu un envàs o una etiqueta, [envieu-nos una mostra i indiqueu on s’haurà de llegir](/contacte). Això permet plantejar una prova abans de modificar tota la gamma.
+
+## Fonts i documentació tècnica
+
+- [GS1 · Guia d’implantació de codis 2D al punt de venda](https://ref.gs1.org/guidelines/2d-in-retail/)
+- [GS1 · Estàndard de sintaxi GS1 Digital Link](https://ref.gs1.org/standards/digital-link/uri-syntax/)
+- [GS1 Spain · Migració al 2D](https://www.gs1es.org/capturar-codigo-de-barras-gs1/migracion-2d/)
